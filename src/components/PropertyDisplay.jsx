@@ -87,7 +87,7 @@ export default function PropertyDisplay() {
                                 onClick={handlePrevious}
                                 aria-label="Previous property"
                             >
-                                <img className="left-arrow" src="/images/arrow-left.svg" alt="" />
+                                <img className="left-arrow" src="images/arrow-left.svg" alt="" />
                             </button>
                             <div className="btn-text-container">
                                 <span className="btn-text">{currentIndex + 1}</span>
@@ -99,7 +99,7 @@ export default function PropertyDisplay() {
                                 onClick={handleNext}
                                 aria-label="Next property"
                             >
-                                <img className="right-arrow" src="/images/arrow-right.svg" alt="" />
+                                <img className="right-arrow" src="images/arrow-right.svg" alt="" />
                             </button>
                         </div>
                     </div>
@@ -111,14 +111,14 @@ export default function PropertyDisplay() {
                                 onClick={handlePrevious}
                                 aria-label="Previous property"
                             >
-                                <img className="left-arrow" src="/images/arrow-left.svg" alt="" />
+                                <img className="left-arrow" src="images/arrow-left.svg" alt="" />
                             </button>
                             <button 
                                 className="right-arrow" 
                                 onClick={handleNext}
                                 aria-label="Next property"
                             >
-                                <img className="right-arrow" src="/images/arrow-right.svg" alt="" />
+                                <img className="right-arrow" src="images/arrow-right.svg" alt="" />
                             </button>
                         </div>
                     </div>

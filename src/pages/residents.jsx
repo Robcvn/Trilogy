@@ -25,7 +25,7 @@ export function Residents() {
             hText = 'ABOUT US'
             pText = 'Committed to the highest level of quality, service, and performance.'
             lText = 'meet trilogy'
-            imageUrl = '/images/residents-img.png'
+            imageUrl = 'images//residents-img.png'
             />
             <Footer />
         </div>

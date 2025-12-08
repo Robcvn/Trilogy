@@ -17,7 +17,7 @@ export function Careers() {
                     </div>
                 </div>
             </div>
-            <section className="careers-hero">
+            <section className="careers-hero" style={{backgroundImage: 'url(/Trilogy/images/careers-hero.png)'}}>
 
             </section>
             <section className="three-col-container u-container">
@@ -50,7 +50,7 @@ export function Careers() {
             <PreviewDisplay
             header = 'CAREERS'
             paragraph = 'We shape environments into prosperous, thriving communities. Join us.'
-            backgroundImage = '/images/p-display-img2.png'
+            backgroundImage = 'images//p-display-img2.png'
             />
             <Footer />
 

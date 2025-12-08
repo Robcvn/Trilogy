@@ -28,8 +28,8 @@ export function PortfolioDetail() {
     // Property images for gallery
     const propertyImages = [
         property.img,
-        "/images/noca.png",
-        "/images/volaris.png"
+        "images//noca.png",
+        "images//volaris.png"
     ];
 
     return (
@@ -112,7 +112,7 @@ export function PortfolioDetail() {
             </div>
 
             {/* Bottom CTA Section */}
-            <div className='port-detail-cta-section'>
+            <div className='port-detail-cta-section' style={{backgroundImage: 'url(/Trilogy/images/investmentsbuilding.png)'}}>
                 <div className='port-cta-overlay'>
                     <div className='u-container'>
                         <span className='overline-sm-medium port-cta-eyebrow'>INVESTMENTS</span>

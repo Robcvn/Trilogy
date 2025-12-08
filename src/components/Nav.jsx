@@ -44,7 +44,7 @@ export default function Nav() {
         <Link to="/">
           <button className="nav-logo">
             <img
-              src="/images/logo-black.svg"
+              src="images/logo-black.svg"
               className="trilogy-logo"
               alt="Trilogy in all uppercase"
             />

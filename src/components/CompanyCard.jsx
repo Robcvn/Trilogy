@@ -13,7 +13,7 @@ export default function CompanyCard(props) {
           </div>
           <div className="p-btn-container">
             <button className="plus-btn">
-              <img src="/images/p-btn-icon.svg" alt="" />
+              <img src="images/p-btn-icon.svg" alt="" />
             </button>
           </div>
         </div>

@@ -51,22 +51,22 @@ a {
 
 @font-face {
   font-family: "CentraNo2-Medium";
-  src: url("src/Fonts/CentraNo2/CentraNo2-Medium.woff");
+  src: url("Fonts/CentraNo2/CentraNo2-Medium.woff");
 }
 
 @font-face {
   font-family: "CentraNo2-Book";
-  src: url("src/Fonts/CentraNo2/CentraNo2-Book.woff");
+  src: url("Fonts/CentraNo2/CentraNo2-Book.woff");
 }
 
 @font-face {
   font-family: "IvyMode";
-  src: url("src/Fonts/IvyMode/WOFF2/IvyMode-Regular_unobfuscated_LKfaPEX.woff2");
+  src: url("Fonts/IvyMode/WOFF2/IvyMode-Regular_unobfuscated_LKfaPEX.woff2");
 }
 
 @font-face {
   font-family: 'IvyMode-Light';
-  src: url('src/Fonts/IvyMode/OTF/IvyMode-Light.otf');
+  src: url('Fonts/IvyMode/OTF/IvyMode-Light.otf');
 }
 
 .heading-5xl-book {
@@ -1040,7 +1040,7 @@ button {
 
 .grid-img {
   position: absolute;
-  background-image: url('/images/grid-pattern-tall.svg');
+  background-image: url('/Trilogy/images/grid-pattern-tall.svg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 960px;
@@ -1162,7 +1162,7 @@ button {
 
 .prev-display-wrapper {
   position: relative;
-  background-image: url('/images/meeting-room.png');
+  background-image: url('/Trilogy/images/meeting-room.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1276,7 +1276,7 @@ button {
 }
 
 .footer-bg {
-  background: url('/images/Union.svg');
+  background: url('/Trilogy/images/Union.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1480,7 +1480,7 @@ button {
 }
 
 .h-grid {
-  background-image: url('/images/grid-pattern.svg');
+  background-image: url('/Trilogy/images/grid-pattern.svg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 10%;
@@ -1507,7 +1507,7 @@ button {
 
 /* ----------------------------------------------Company IMG Section-------------------------------- */
 .c-hero {
-  background-image: url('/images/hero-img.png');
+  background-image: url('/Trilogy/images/hero-img.png');
 }
 
 .c-hero-img {
@@ -1609,7 +1609,7 @@ button {
 
 
 .grid-grid {
-  background-image: url('/images/grid-pattern-tall.svg');
+  background-image: url('/Trilogy/images/grid-pattern-tall.svg');
   background-size: cover;
   position: absolute;
   width: 33%;
@@ -1717,11 +1717,11 @@ button {
 }
 
 .ap-btn-left {
-  background-image: url('/images/ap-left.png');
+  background-image: url('/Trilogy/images/ap-left.png');
 }
 
 .ap-btn-right {
-  background-image: url('/images/ap-left.png');
+  background-image: url('/Trilogy/images/ap-left.png');
   transform: scaleX(-1);
 }
 
@@ -1871,11 +1871,11 @@ button {
 }
 
 .ap-btn-left {
-  background-image: url('/images/ap-left.png');
+  background-image: url('/Trilogy/images/ap-left.png');
 }
 
 .ap-btn-right {
-  background-image: url('/images/ap-left.png');
+  background-image: url('/Trilogy/images/ap-left.png');
   transform: scaleX(-1);
 }
 
@@ -2106,7 +2106,7 @@ button {
 .plus-btn {
   height: 25px;
   width: 25px;
-  background-image: url("/images/p-btn-icon.svg");
+  background-image: url("/Trilogy/images/p-btn-icon.svg");
   z-index: 1;
 }
 
@@ -2133,7 +2133,7 @@ button {
 }
 
 .port-grid {
-  background-image: url('/images/grid-pattern.svg');
+  background-image: url('/Trilogy/images/grid-pattern.svg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 4%;
@@ -2439,7 +2439,7 @@ button {
 }
 
 .ap-btn-left {
-  background-image: url('/images/ap-left.png');
+  background-image: url('/Trilogy/images/ap-left.png');
   width: 48px;
   height: 48px;
   background-size: contain;
@@ -2480,7 +2480,7 @@ button {
 }
 
 .ap-btn-right {
-  background-image: url('/images/ap-left.png');
+  background-image: url('/Trilogy/images/ap-left.png');
   width: 48px;
   height: 48px;
   background-size: contain;
@@ -2521,7 +2521,7 @@ button {
 
 .ap-p-display-wrapper {
   position: relative;
-  background-image: url('/images/investmentsbuilding.png');
+  background-image: url('/Trilogy/images/investmentsbuilding.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2858,7 +2858,7 @@ button {
   content: '';
   width: 24px;
   height: 24px;
-  background-image: url('/images/grid-icon.svg');
+  background-image: url('/Trilogy/images/grid-icon.svg');
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 12px;
@@ -2879,7 +2879,7 @@ button {
   width: 100%;
   height: 60vh;
   min-height: 500px;
-  background-image: url('/images/investmentsbuilding.png');
+  background-image: url('/Trilogy/images/investmentsbuilding.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2942,7 +2942,7 @@ button {
 }
 
 .grid-pat {
-  background-image: url('/images/grid-pattern-tall.svg');
+  background-image: url('/Trilogy/images/grid-pattern-tall.svg');
   background-repeat: repeat;
   background-size: cover;
   position: absolute;
@@ -3035,7 +3035,7 @@ button {
 }
 
 .careers-hero {
-  background-image: url('/images/careers-hero.png');
+  background-image: url('/Trilogy/images/careers-hero.png');
   width: 95%;
   aspect-ratio: 51/20;
   background-position: center;
@@ -3968,7 +3968,7 @@ label {
   }
 
   .h-grid {
-    background-image: url(/images/grid-pattern.svg);
+    background-image: url(/Trilogy/images/grid-pattern.svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 10%;
