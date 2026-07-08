@@ -2,12 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function GalleryCard(props) {
-    // Create a URL-friendly slug from the property name
-    const slug = props.data.name.toLowerCase().replace(/\s+/g, '-');
-    
     return(
         <div className="gallery-card-wrapper">
-            <Link to={`/portfolio/${slug}`} className="gallery-link"></Link>
+            <Link to={`/portfolio/${props.data.slug}`} className="gallery-link"></Link>
             <div className="g-card-img" style={{ backgroundImage: `url(${props.img})`}}></div>
             <div className="gallery-card-content">
                 <div className="gallery-inner">
