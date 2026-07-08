@@ -1,36 +1,43 @@
+import optimaImg from "./assets/images/optima.png";
+import volarisImg from "./assets/images/volaris.png";
+import nocaImg from "./assets/images/noca.png";
+import parkImg from "./assets/images/park.png";
+import villasImg from "./assets/images/villas.png";
+import mirandaImg from "./assets/images/miranda.png";
+
 export default [
     {
-        img: "images/optima.png",
+        img: optimaImg,
         name: "Optima Old Orchard Woods",
         address: "9739 Woods Drive",
         city: "Skokie, IL"
     },
     {
-        img: "images/volaris.png",
+        img: volarisImg,
         name: "Volaris",
         address: "9739 Woods Drive",
         city: "Lansing, MI"
     },
     {
-        img: "images/noca.png",
+        img: nocaImg,
         name: "NoCa Blu",
         address: "9739 Woods Drive",
         city: "Chicago, IL"
     },
     {
-        img: "images/park.png",
+        img: parkImg,
         name: "Park 205",
         address: "9739 Woods Drive",
         city: "Park Ridge, IL"
     },
     {
-        img: "images/villas.png",
+        img: villasImg,
         name: "The Villas at Northstar",
         address: "9739 Woods Drive",
         city: "Ann Arbor, MI"
     },
     {
-        img: "images/miranda.png",
+        img: mirandaImg,
         name: "Miranda Apartments",
         address: "9379 Woods Drive",
         city: "Columbus, OH"

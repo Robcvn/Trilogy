@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logoBlack from "../assets/images/logo-black.svg";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function Nav() {
         <Link to="/">
           <button className="nav-logo">
             <img
-              src="images/logo-black.svg"
+              src={logoBlack}
               className="trilogy-logo"
               alt="Trilogy in all uppercase"
             />

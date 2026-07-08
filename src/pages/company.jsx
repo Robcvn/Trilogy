@@ -4,7 +4,8 @@ import CompanyCard from "../components/CompanyCard";
 import CardGrid from "../components/CardGrid"
 import PreviewDisplay from "../components/PreviewDisplay";
 import Footer from "../components/Footer";
-import propsImage from '/images/p-display-img2.png'
+import propsImage from '../assets/images/p-display-img2.png'
+import heroImg from '../assets/images/hero-img.png'
 
 
 export function Company() {
@@ -18,7 +19,7 @@ export function Company() {
                     <p className="p-xl-reg company-p">Trilogy is a multi-award-winning real estate investment and management firm.</p>
                 </div>
             </div>
-            <img className="c-hero-img" src="\images\hero-img.png" alt="" />
+            <img className="c-hero-img" src={heroImg} alt="" />
             <CompanyInfo />
             <div className="leadership-container u-container">
                 <h2 className="l-h">Leadership</h2>

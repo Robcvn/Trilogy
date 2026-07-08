@@ -1,6 +1,8 @@
 import React from "react";
 import PreviewDisplay from "../components/PreviewDisplay.jsx";
 import Footer from "../components/Footer";
+import careersHero from "../assets/images/careers-hero.png";
+import pDisplayImg2 from "../assets/images/p-display-img2.png";
 
 
 export function Careers() {
@@ -17,7 +19,7 @@ export function Careers() {
                     </div>
                 </div>
             </div>
-            <section className="careers-hero" style={{backgroundImage: 'url(/Trilogy/images/careers-hero.png)'}}>
+            <section className="careers-hero" style={{backgroundImage: `url(${careersHero})`}}>
 
             </section>
             <section className="three-col-container u-container">
@@ -50,7 +52,7 @@ export function Careers() {
             <PreviewDisplay
             header = 'CAREERS'
             paragraph = 'We shape environments into prosperous, thriving communities. Join us.'
-            backgroundImage = 'images//p-display-img2.png'
+            backgroundImage = {pDisplayImg2}
             />
             <Footer />
 

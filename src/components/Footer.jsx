@@ -1,11 +1,15 @@
 import React from "react";
+import logoWhite from "../assets/images/logo-white.svg";
+import aamcLogo from "../assets/images/aamc.png";
+import houseLogo from "../assets/images/house.png";
+import handiLogo from "../assets/images/handi.png";
 
 export default function Footer() {
     return(
         <div className="footer-wrapper">
             <div className="footer-bg"></div>
             <div className="footer-container u-container">
-                <div className="footer-logo"><a href="#"><img className="logo-white" src="\images\logo-white.svg" alt="trilogy logo in white" /></a></div>
+                <div className="footer-logo"><a href="#"><img className="logo-white" src={logoWhite} alt="trilogy logo in white" /></a></div>
                 <div className="footer-mid f-grid">                                       
                     <div className="f-contact contact-grid">
                         <div className="f-address">
@@ -56,9 +60,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="sub-footer-right">
-                    <img src="\images\aamc.png" alt="aamc logo"/>
-                    <img src="\images\house.png" alt="small image of house"/>
-                    <img src="\images\handi.png" alt="handicap symbol"/>
+                    <img src={aamcLogo} alt="aamc logo"/>
+                    <img src={houseLogo} alt="small image of house"/>
+                    <img src={handiLogo} alt="handicap symbol"/>
                 </div>
             </div>       
         </div>

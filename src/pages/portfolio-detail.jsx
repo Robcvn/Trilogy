@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import '../App.css';
 import Footer from '../components/Footer';
 import GalleryData from '../GalleryData';
+import nocaImg from '../assets/images/noca.png';
+import volarisImg from '../assets/images/volaris.png';
 
 export function PortfolioDetail() {
     const { id } = useParams();
@@ -28,8 +30,8 @@ export function PortfolioDetail() {
     // Property images for gallery
     const propertyImages = [
         property.img,
-        "images//noca.png",
-        "images//volaris.png"
+        nocaImg,
+        volarisImg
     ];
 
     return (
@@ -112,7 +114,7 @@ export function PortfolioDetail() {
             </div>
 
             {/* Bottom CTA Section */}
-            <div className='port-detail-cta-section' style={{backgroundImage: 'url(/Trilogy/images/investmentsbuilding.png)'}}>
+            <div className='port-detail-cta-section'>
                 <div className='port-cta-overlay'>
                     <div className='u-container'>
                         <span className='overline-sm-medium port-cta-eyebrow'>INVESTMENTS</span>

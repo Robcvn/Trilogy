@@ -1,3 +1,5 @@
+import pBtnIcon from "../assets/images/p-btn-icon.svg";
+
 export default function CompanyCard(props) {
     return (
       <div className="card" onClick={props.onClick}>
@@ -13,7 +15,7 @@ export default function CompanyCard(props) {
           </div>
           <div className="p-btn-container">
             <button className="plus-btn">
-              <img src="images/p-btn-icon.svg" alt="" />
+              <img src={pBtnIcon} alt="" />
             </button>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import PreviewDisplay from "../components/PreviewDisplay";
 import Footer from "../components/Footer";
 import AltDisplay from "../components/AltDisplay";
+import residentsImg from "../assets/images/residents-img.png";
 
 
 export function Residents() {
@@ -25,7 +26,7 @@ export function Residents() {
             hText = 'ABOUT US'
             pText = 'Committed to the highest level of quality, service, and performance.'
             lText = 'meet trilogy'
-            imageUrl = 'images//residents-img.png'
+            imageUrl = {residentsImg}
             />
             <Footer />
         </div>

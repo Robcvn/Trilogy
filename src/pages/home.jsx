@@ -6,7 +6,7 @@ import PropertyDisplay from '../components/PropertyDisplay'
 import TwoColSection from '../components/TwoColSection'
 import PreviewDisplay from '../components/PreviewDisplay'
 import Footer from '../components/Footer'
-import propsimg2 from '/images/propimg2.jpg'
+import propsimg2 from '../assets/images/propimg2.jpg'
 
 
 export function Home() {

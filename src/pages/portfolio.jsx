@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import PropertyDisplay from '../components/PropertyDisplay';
 import GalleryCardGrid from '../components/GalleryCardGrid';
 import GalleryData from '../GalleryData';
+import arrowLongDown from '../assets/images/arrow-long-down.svg';
 
 export function Portfolio() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -69,7 +70,7 @@ export function Portfolio() {
             <div className="port-content u-container p-grid">
                 <div className="h-links h-fp">
                     <div className="feat-prop">
-                        <a href="#"><img src="images/arrow-long-down.svg" className="arrow-down" alt="gold arrow pointing down" /></a>
+                        <a href="#"><img src={arrowLongDown} className="arrow-down" alt="gold arrow pointing down" /></a>
                         <a href="#">featured properties</a>
                     </div>
                 </div>
@@ -174,7 +175,7 @@ export function Portfolio() {
                     </div>
                 </div>
             </section>
-            <div className="ap-p-display-wrapper" style={{backgroundImage: 'url(/Trilogy/images/investmentsbuilding.png)'}}>
+            <div className="ap-p-display-wrapper">
                 <div className="prev-display-container u-container">
                     <h3 className="prev-h">Investments</h3>
                     <p className="prev-p">A track record of performance and opportunity.</p>

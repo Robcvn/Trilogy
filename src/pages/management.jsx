@@ -1,6 +1,7 @@
 import React from "react";
 import PreviewDisplay from "../components/PreviewDisplay";
 import Footer from "../components/Footer";
+import pDisplayImg2 from "../assets/images/p-display-img2.png";
 
 
 
@@ -21,7 +22,7 @@ export function Management() {
             <PreviewDisplay 
             header = "careers"
             paragraph = "Opportunity drives us. Higher is our aim. We’re determined to live well."
-            backgroundImage = "images//p-display-img2.png"
+            backgroundImage = {pDisplayImg2}
             />
 
             <Footer />

@@ -1,7 +1,6 @@
 import React from "react";
 import PreviewDisplay from "../components/PreviewDisplay.jsx";
 import Footer from "../components/Footer";
-import bgImage from "/images/investmentsbuilding.png"
 
 
 export function Investors() {

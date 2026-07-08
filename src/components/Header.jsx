@@ -1,4 +1,5 @@
 import React from "react";
+import arrowLongDown from "../assets/images/arrow-long-down.svg";
 
 export default function Header(){
     return(
@@ -8,7 +9,7 @@ export default function Header(){
             <div className="h-links">
                 <a href="#" className="meet-link underline">meet trilogy</a>
                 <div className="feat-prop">
-                    <a href="#"><img src="\images\arrow-long-down.svg" className="arrow-down" alt="gold arrow pointing down" /></a>
+                    <a href="#"><img src={arrowLongDown} className="arrow-down" alt="gold arrow pointing down" /></a>
                     <a href="#">featured properties</a>
                 </div>
             </div>
