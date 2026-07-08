@@ -755,7 +755,7 @@ button {
   margin-bottom: 16px;
 }
 
-.mf-links-container a:first-child {
+.mf-links-container span:first-child {
   margin-right: 16px;
 }
 

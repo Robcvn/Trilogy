@@ -1,5 +1,5 @@
 import React from "react";
-import PreviewDisplay from "../components/PreviewDisplay.jsx";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 
@@ -22,6 +22,7 @@ export function Investors() {
                         <h1 className="invest-p-h">1031/DST Investors</h1>
                         <p className="invest-p">Trilogy Real Estate Group provides DST investors timely updates on their Trilogy DST investment programs. To access your investment information please click the link below. To contact Investor Services by phone please call 847-265-1334.</p>
                     </div>
+                    {/* TODO(user): investor log-in destination */}
                     <a className="log-link" href="#">log in</a>
                 </div>
             </div>
@@ -30,7 +31,7 @@ export function Investors() {
                     <h3 className="prev-h">Investments</h3>
                     <p className="prev-p">A track record of performance and opportunity.</p>
                     <div className="contact-link-container">
-                        <a href="#" className='contact-link'>contact us</a>
+                        <Link to="/contact" className='contact-link'>contact us</Link>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function PreviewDisplay(props) {
     return(
@@ -8,7 +9,7 @@ export default function PreviewDisplay(props) {
                 <p className="prev-p">{props.paragraph}</p>
                 <div className="prev-display-links">
                     <div className="pos-link-container">
-                        <a href="#" className="port-link">view open positions</a>
+                        <Link to={props.linkTo} className="port-link">{props.linkText}</Link>
                     </div>
                 </div>
             </div>

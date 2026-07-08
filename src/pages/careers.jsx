@@ -13,8 +13,9 @@ export function Careers() {
                 <h1 className="careers-h">Raising the bar.</h1>
                 <div className="careers-inner-right">
                     <p className="careers-h-p">An emphasis on and commitment to employee well being. An open-door policy from leadership. A dedication to diversity, mentorship, and dynamic career progression. At Trilogy, exceeding expectations is all-encompassing—our culture included.</p>
-                    <p className="careers-h-p">If you don’t see an open position for you but would like to start a conversation, email your resume to <a href="#" className="careers-email-link">hr@trilogyreg.com</a>.</p>
+                    <p className="careers-h-p">If you don’t see an open position for you but would like to start a conversation, email your resume to <a href="mailto:hr@trilogyreg.com" className="careers-email-link">hr@trilogyreg.com</a>.</p>
                     <div className="c-pos-link-container">
+                        {/* TODO(user): external job-board URL */}
                         <a href="#" className="c-pos-link">view open positions</a>
                     </div>
                 </div>
@@ -53,6 +54,8 @@ export function Careers() {
             header = 'CAREERS'
             paragraph = 'We shape environments into prosperous, thriving communities. Join us.'
             backgroundImage = {pDisplayImg2}
+            linkText = 'view open positions'
+            linkTo = '/careers'
             />
             <Footer />
 

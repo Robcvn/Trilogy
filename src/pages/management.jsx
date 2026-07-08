@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PreviewDisplay from "../components/PreviewDisplay";
 import Footer from "../components/Footer";
 import pDisplayImg2 from "../assets/images/p-display-img2.png";
@@ -16,13 +17,16 @@ export function Management() {
                 </div>
                 <div className="h-rc">
                     <p className="h-rc-p">We pride ourselves in exceeding expectations and consistently setting the standard for innovation, quality, and attention to detail in all of our managed communities. Trilogy offers a fully-integrated operating platform with expertise in property operations, construction management, accounting, marketing and branding, risk management, human resources, software and technology, and all other related support functions. Through local-market knowledge and a focus on recruiting and professional development, we are able to expertly maintain our properties, provide superior customer service, and maximize the performance of our assets.</p>
-                    <a className="log-link" href="#">learn more</a>
+                    {/* TODO(user): confirm destination for this link */}
+                    <Link className="log-link" to="/company">learn more</Link>
                 </div>
             </div>
-            <PreviewDisplay 
+            <PreviewDisplay
             header = "careers"
             paragraph = "Opportunity drives us. Higher is our aim. We’re determined to live well."
             backgroundImage = {pDisplayImg2}
+            linkText = "view open positions"
+            linkTo = "/careers"
             />
 
             <Footer />

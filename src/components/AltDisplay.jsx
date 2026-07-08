@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AltDisplay(props) {
   const bgStyle = {
@@ -11,9 +12,9 @@ export default function AltDisplay(props) {
         <h3 className="prev-h">{props.hText}</h3>
         <p className="prev-p">{props.pText}</p>
         <div className="contact-link-container">
-          <a href="#" className="contact-link">
+          <Link to={props.linkTo} className="contact-link">
             {props.lText}
-          </a>
+          </Link>
         </div>
       </div>
     </div>

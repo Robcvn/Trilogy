@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import Footer from '../components/Footer';
 import PropertyDisplay from '../components/PropertyDisplay';
@@ -13,19 +14,10 @@ export function Portfolio() {
 
     // Filter properties based on active filter
     const getFilteredProperties = () => {
-        switch(activeFilter) {
-            case 'current':
-                // return GalleryData.filter(prop => prop.status === 'current');
-                return GalleryData; // Placeholder
-            case 'development':
-                // return GalleryData.filter(prop => prop.status === 'development');
-                return GalleryData; // Placeholder
-            case 'legacy':
-                // return GalleryData.filter(prop => prop.status === 'legacy');
-                return GalleryData; // Placeholder
-            default:
-                return GalleryData;
+        if (activeFilter === 'all') {
+            return GalleryData;
         }
+        return GalleryData.filter(prop => prop.status === activeFilter);
     };
 
     const filteredProperties = getFilteredProperties();
@@ -64,14 +56,20 @@ export function Portfolio() {
         setActiveFilter(filter);
     };
 
+    const scrollToAllProps = (e) => {
+        e.preventDefault();
+        const target = document.getElementById('all-properties');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div className='port-main-container'>
             <div className="grid-pat"></div>
             <div className="port-content u-container p-grid">
                 <div className="h-links h-fp">
                     <div className="feat-prop">
-                        <a href="#"><img src={arrowLongDown} className="arrow-down" alt="gold arrow pointing down" /></a>
-                        <a href="#">featured properties</a>
+                        <a href="#all-properties" onClick={scrollToAllProps}><img src={arrowLongDown} className="arrow-down" alt="gold arrow pointing down" /></a>
+                        <a href="#all-properties" onClick={scrollToAllProps}>featured properties</a>
                     </div>
                 </div>
                 <div className="port-content-inner">
@@ -95,7 +93,7 @@ export function Portfolio() {
                 </div>
             </div>
             <PropertyDisplay />
-            <section className='all-props'>
+            <section className='all-props' id='all-properties'>
                 <div className='all-props-content u-container'>
                     <div className='mini-nav'>
                         <div className='ap-h-wrapper'>
@@ -180,7 +178,7 @@ export function Portfolio() {
                     <h3 className="prev-h">Investments</h3>
                     <p className="prev-p">A track record of performance and opportunity.</p>
                     <div className="contact-link-container">
-                        <a href="#" className='contact-link'>contact us</a>
+                        <Link to="/contact" className='contact-link'>contact us</Link>
                     </div>
                 </div>
             </div>

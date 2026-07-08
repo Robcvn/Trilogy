@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import GalleryData from "../GalleryData";
 import arrowLeft from "../assets/images/arrow-left.svg";
 import arrowRight from "../assets/images/arrow-right.svg";
 
-export default function PropertyDisplay() {
+export default function PropertyDisplay({ id }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [touchStart, setTouchStart] = useState(null);
     const [touchEnd, setTouchEnd] = useState(null);
@@ -65,8 +66,9 @@ export default function PropertyDisplay() {
     }, [currentIndex]);
 
     return (
-        <div 
-            className="p-display-wrapper" 
+        <div
+            id={id}
+            className="p-display-wrapper"
             style={{ backgroundImage: `url(${currentProperty.img})` }}
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
@@ -82,7 +84,7 @@ export default function PropertyDisplay() {
                         </div>
                     </div>
                     <div className="p-buttons">
-                        <a href="#" className="view-prop-link">VIEW PROPERTY</a>
+                        <Link to={`/portfolio/${currentProperty.slug}`} className="view-prop-link">VIEW PROPERTY</Link>
                         <div className="p-display-btn-container">
                             <button 
                                 className="left-arrow" 
@@ -106,7 +108,7 @@ export default function PropertyDisplay() {
                         </div>
                     </div>
                     <div className="p-buttons-mobile">
-                        <a href="#" className="view-prop-link-mobile">VIEW PROPERTY</a>
+                        <Link to={`/portfolio/${currentProperty.slug}`} className="view-prop-link-mobile">VIEW PROPERTY</Link>
                         <div className="p-display-btn-container">
                             <button 
                                 className="left-arrow" 

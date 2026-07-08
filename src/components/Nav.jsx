@@ -118,8 +118,9 @@ export default function Nav() {
           <div className="mobile-footer-inner-content u-container">
             <p>© 2023 Trilogy Real Estate Group</p>
             <div className="mf-links-container">
-              <a href="#">TERMS</a>
-              <a href="#">PRIVACY POLICY</a>
+              {/* TODO(user): terms and privacy policy pages/content */}
+              <span>TERMS</span>
+              <span>PRIVACY POLICY</span>
             </div>
           </div>
         </div>

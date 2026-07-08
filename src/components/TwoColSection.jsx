@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function TwoColSection() {
     return(
@@ -12,7 +13,7 @@ export default function TwoColSection() {
                 </div>
                 <div className="two-col-inner-right">
                     <p className="inner-right-p">We buy or build, and manage our own communities in 14 cities across the U.S. and have $4.5 billion in real estate transaction volume. Our complete vertical integration gives us the uncommon ability to see and predict market conditions—and maintain the highest standards of service.</p>
-                    <button className="port-link"><a className="" href="#">VIEW OUR PORTFOLIO</a></button>
+                    <Link className="port-link" to="/portfolio">VIEW OUR PORTFOLIO</Link>
                 </div>
                 
             </div>

@@ -26,10 +26,12 @@ export function Company() {
                 <p className="l-p">Committed to our people, communities, and investments.</p>
             </div>
             <CardGrid />
-            <PreviewDisplay 
+            <PreviewDisplay
             header = "careers"
             paragraph = "Voted one of National Apartment Association's top employers."
             backgroundImage = {propsImage}
+            linkText = "view open positions"
+            linkTo = "/careers"
             />
             <Footer />
 

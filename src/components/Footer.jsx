@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logoWhite from "../assets/images/logo-white.svg";
 import aamcLogo from "../assets/images/aamc.png";
 import houseLogo from "../assets/images/house.png";
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className="footer-wrapper">
             <div className="footer-bg"></div>
             <div className="footer-container u-container">
-                <div className="footer-logo"><a href="#"><img className="logo-white" src={logoWhite} alt="trilogy logo in white" /></a></div>
+                <div className="footer-logo"><Link to="/"><img className="logo-white" src={logoWhite} alt="trilogy logo in white" /></Link></div>
                 <div className="footer-mid f-grid">                                       
                     <div className="f-contact contact-grid">
                         <div className="f-address">
@@ -31,30 +32,31 @@ export default function Footer() {
                     <div className="links-first-col">
                             <h4 className="f-eyebrow">navigation</h4>
                             <div className="footer-nav f-white-text">
-                                <a className='f-links' href="#">Company</a>
-                                <a className='f-links' href="#">Portfolio</a>
-                                <a className='f-links' href="#">Careers</a>
-                                <a className='f-links' href="#">Contact</a>
+                                <Link className='f-links' to="/company">Company</Link>
+                                <Link className='f-links' to="/portfolio">Portfolio</Link>
+                                <Link className='f-links' to="/careers">Careers</Link>
+                                <Link className='f-links' to="/contact">Contact</Link>
                             </div>
 
                         </div>
                         <div className="links-last-col">
                             <h4 className="f-eyebrow">client access</h4>
                             <div className="footer-client f-white-text">
-                                <a className='f-links' href="#">Residents</a>
-                                <a className='f-links' href="#">Management</a>
-                                <a className='f-links' href="#">Investors</a>
+                                <Link className='f-links' to="/residents">Residents</Link>
+                                <Link className='f-links' to="/management">Management</Link>
+                                <Link className='f-links' to="/investors">Investors</Link>
                             </div>
 
                         </div>
                 </div>
-                <p className="f-disclaimer ">The contents of this website and/or any related web page links do not constitute an offer of securities or a solicitation of an offer to buy securities. Securities offered through Arete Wealth Management, LLC member FINRA, SIPC, and NFA. Only available in states where Arete Wealth Management, LLC is registered. Arete Wealth Management, LLC is not affiliated with Trilogy Real Estate Group or its affiliates.”</p>
+                <p className="f-disclaimer ">The contents of this website and/or any related web page links do not constitute an offer of securities or a solicitation of an offer to buy securities. Securities offered through Arete Wealth Management, LLC member FINRA, SIPC, and NFA. Only available in states where Arete Wealth Management, LLC is registered. Arete Wealth Management, LLC is not affiliated with Trilogy Real Estate Group or its affiliates.</p>
             </div>
             <div className="f-divider"></div>
             <div className="sub-footer u-container">
                 <div className="sub-footer-left">
                     <h5 className="copyright copyright-text">© 2023 Trilogy Real Estate Group</h5>
                     <div className="copyright-inner">
+                        {/* TODO(user): terms and privacy policy pages/content */}
                         <h5 className="copyright-text">terms</h5>
                         <h5 className="copyright-text">privacy policy</h5>
                     </div>

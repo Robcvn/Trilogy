@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PreviewDisplay from "../components/PreviewDisplay";
 import Footer from "../components/Footer";
 import AltDisplay from "../components/AltDisplay";
@@ -17,7 +18,7 @@ export function Residents() {
                 <div className="h-rc">
                     <p className="h-rc-p">Our communities offer resort-style amenities, designer finishes, and premier services. They’re located in desirable neighborhoods, just steps from shopping and dining with easy access to a wide range of recreations and conveniences. And our promise to our residents is that they will always come first—our attentive onsite office and highly-skilled 24/7 maintenance teams ensure our residents live well.</p>
                     <div className="h-rc-links">
-                        <a className="port-link" href="#">find a home</a>
+                        <Link className="port-link" to="/portfolio">find a home</Link>
                     </div>
                 </div>
                 
@@ -26,6 +27,7 @@ export function Residents() {
             hText = 'ABOUT US'
             pText = 'Committed to the highest level of quality, service, and performance.'
             lText = 'meet trilogy'
+            linkTo = '/company'
             imageUrl = {residentsImg}
             />
             <Footer />
