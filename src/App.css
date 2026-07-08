@@ -3348,6 +3348,18 @@ label {
   margin-top: 80px;
 }
 
+.form-error {
+  font-family: 'CentraNo2-Book';
+  font-size: 12px;
+  line-height: 1rem;
+  color: #b3401f;
+  margin-top: 4px;
+}
+
+.form-success {
+  margin-top: 32px;
+}
+
 .submit-btn {
   font-family: 'CentraNo2-Medium';
   font-size: 14px;
