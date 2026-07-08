@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import '../App.css';
-import Footer from '../components/Footer';
 import GalleryData from '../GalleryData';
 
 export function PortfolioDetail() {
@@ -117,8 +116,6 @@ export function PortfolioDetail() {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </div>
     );
 }

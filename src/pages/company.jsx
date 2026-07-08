@@ -3,7 +3,6 @@ import CompanyInfo from "../components/CompanyInfo";
 import CompanyCard from "../components/CompanyCard";
 import CardGrid from "../components/CardGrid"
 import PreviewDisplay from "../components/PreviewDisplay";
-import Footer from "../components/Footer";
 import propsImage from '../assets/images/p-display-img2.png'
 import heroImg from '../assets/images/hero-img.png'
 
@@ -19,7 +18,7 @@ export function Company() {
                     <p className="p-xl-reg company-p">Trilogy is a multi-award-winning real estate investment and management firm.</p>
                 </div>
             </div>
-            <img className="c-hero-img" src={heroImg} alt="" />
+            <img className="c-hero-img" src={heroImg} alt="Exterior of a Trilogy residential property" />
             <CompanyInfo />
             <div className="leadership-container u-container">
                 <h2 className="l-h">Leadership</h2>
@@ -33,7 +32,6 @@ export function Company() {
             linkText = "view open positions"
             linkTo = "/careers"
             />
-            <Footer />
 
         </div>
         

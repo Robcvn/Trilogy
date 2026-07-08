@@ -1,6 +1,5 @@
 import React from "react";
 import PreviewDisplay from "../components/PreviewDisplay.jsx";
-import Footer from "../components/Footer";
 import careersHero from "../assets/images/careers-hero.png";
 import pDisplayImg2 from "../assets/images/p-display-img2.png";
 
@@ -57,7 +56,6 @@ export function Careers() {
             linkText = 'view open positions'
             linkTo = '/careers'
             />
-            <Footer />
 
         </div>
         

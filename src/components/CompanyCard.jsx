@@ -2,8 +2,12 @@ import pBtnIcon from "../assets/images/p-btn-icon.svg";
 
 export default function CompanyCard(props) {
     return (
-      <div className="card" onClick={props.onClick}>
-        <button className="modal-btn"></button>
+      <button
+        type="button"
+        className="card"
+        onClick={props.onClick}
+        aria-label={`View bio for ${props.name}, ${props.title}`}
+      >
         <div
           className="c-card-img"
           style={{ backgroundImage: `url(${props.cardImage})` }}
@@ -14,12 +18,11 @@ export default function CompanyCard(props) {
             <span className="card-title">{props.title}</span>
           </div>
           <div className="p-btn-container">
-            <button className="plus-btn">
+            <span className="plus-btn" aria-hidden="true">
               <img src={pBtnIcon} alt="" />
-            </button>
+            </span>
           </div>
         </div>
-      </div>
+      </button>
     );
   }
-  

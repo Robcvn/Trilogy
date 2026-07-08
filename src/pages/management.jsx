@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PreviewDisplay from "../components/PreviewDisplay";
-import Footer from "../components/Footer";
 import pDisplayImg2 from "../assets/images/p-display-img2.png";
 
 
@@ -28,8 +27,6 @@ export function Management() {
             linkText = "view open positions"
             linkTo = "/careers"
             />
-
-            <Footer />
         </div>
         
     )

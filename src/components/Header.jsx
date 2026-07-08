@@ -16,7 +16,7 @@ export default function Header(){
             <div className="h-links">
                 <Link to="/company" className="meet-link underline">meet trilogy</Link>
                 <div className="feat-prop">
-                    <a href="#featured-properties" onClick={scrollToFeatured}><img src={arrowLongDown} className="arrow-down" alt="gold arrow pointing down" /></a>
+                    <a href="#featured-properties" onClick={scrollToFeatured} aria-hidden="true" tabIndex={-1}><img src={arrowLongDown} className="arrow-down" alt="" /></a>
                     <a href="#featured-properties" onClick={scrollToFeatured}>featured properties</a>
                 </div>
             </div>

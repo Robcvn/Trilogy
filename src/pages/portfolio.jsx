@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-import Footer from '../components/Footer';
 import PropertyDisplay from '../components/PropertyDisplay';
 import GalleryCardGrid from '../components/GalleryCardGrid';
 import GalleryData from '../GalleryData';
@@ -68,7 +67,7 @@ export function Portfolio() {
             <div className="port-content u-container p-grid">
                 <div className="h-links h-fp">
                     <div className="feat-prop">
-                        <a href="#all-properties" onClick={scrollToAllProps}><img src={arrowLongDown} className="arrow-down" alt="gold arrow pointing down" /></a>
+                        <a href="#all-properties" onClick={scrollToAllProps} aria-hidden="true" tabIndex={-1}><img src={arrowLongDown} className="arrow-down" alt="" /></a>
                         <a href="#all-properties" onClick={scrollToAllProps}>featured properties</a>
                     </div>
                 </div>
@@ -182,7 +181,6 @@ export function Portfolio() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

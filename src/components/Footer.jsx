@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-wrapper">
             <div className="footer-bg"></div>
             <div className="footer-container u-container">
-                <div className="footer-logo"><Link to="/"><img className="logo-white" src={logoWhite} alt="trilogy logo in white" /></Link></div>
+                <div className="footer-logo"><Link to="/"><img className="logo-white" src={logoWhite} alt="Trilogy Real Estate Group" /></Link></div>
                 <div className="footer-mid f-grid">                                       
                     <div className="f-contact contact-grid">
                         <div className="f-address">
@@ -62,9 +62,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="sub-footer-right">
-                    <img src={aamcLogo} alt="aamc logo"/>
-                    <img src={houseLogo} alt="small image of house"/>
-                    <img src={handiLogo} alt="handicap symbol"/>
+                    <img src={aamcLogo} alt="AAMC accreditation logo"/>
+                    <img src={houseLogo} alt="Equal Housing Opportunity"/>
+                    <img src={handiLogo} alt="Wheelchair accessible"/>
                 </div>
             </div>       
         </div>

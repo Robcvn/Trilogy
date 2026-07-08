@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -127,8 +126,6 @@ export function Contact() {
                     </form>
                 )}
             </div>
-
-            <Footer />
         </div>
 
     )

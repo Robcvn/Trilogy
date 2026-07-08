@@ -585,13 +585,13 @@ button {
 }
 
 /* Light text color when transparent */
-.nav-container.nav-transparent .nav-links button,
+.nav-container.nav-transparent .nav-links a,
 .nav-container.nav-transparent .trilogy-logo {
   color: #EEECE9;
   filter: brightness(0) invert(1);
 }
 
-.nav-container.nav-transparent .nav-links button {
+.nav-container.nav-transparent .nav-links a {
   color: #EEECE9;
   filter: none;
 }
@@ -611,7 +611,7 @@ button {
 }
 
 /* Default text color on hover */
-.nav-container.nav-transparent:hover .nav-links button,
+.nav-container.nav-transparent:hover .nav-links a,
 .nav-container.nav-transparent:hover .trilogy-logo {
   color: #181A1C;
   filter: none;
@@ -630,7 +630,7 @@ button {
   align-items: center;
 }
 
-.nav-links button {
+.nav-links a {
   text-decoration: none;
   color: #181A1C;
   font-family: "CentraNo2-Medium";
@@ -2019,6 +2019,7 @@ button {
   height: 599px;
   position: relative;
   overflow: hidden;
+  text-align: left;
 }
 
 .card::after {
@@ -2104,6 +2105,7 @@ button {
 }
 
 .plus-btn {
+  display: inline-block;
   height: 25px;
   width: 25px;
   background-image: url("./assets/images/p-btn-icon.svg");
@@ -3449,7 +3451,7 @@ label {
     grid-template-columns: repeat(12,1fr);
   }
 
-  .nav-links button {
+  .nav-links a {
     font-size: 16px;
     padding-left: 24px;
   }

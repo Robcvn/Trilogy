@@ -42,50 +42,38 @@ export default function Nav() {
   return (
     <div className={navClasses}>
       <div className="nav-items u-container">
-        <Link to="/">
-          <button className="nav-logo">
-            <img
-              src={logoBlack}
-              className="trilogy-logo"
-              alt="Trilogy in all uppercase"
-            />
-          </button>
+        <Link to="/" className="nav-logo">
+          <img
+            src={logoBlack}
+            className="trilogy-logo"
+            alt="Trilogy Real Estate Group"
+          />
         </Link>
         <div className="nav-links">
           <div className="nav-links-container">
-            <Link to="/company">
-              <button className="first-btn">Company</button>
-            </Link>
-            <Link to="/portfolio">
-              <button>Portfolio</button>
-            </Link>
-            <Link to="/careers">
-              <button>Careers</button>
-            </Link>
-            <Link to="/residents">
-              <button>Residents</button>
-            </Link>
-            <Link to="/management">
-              <button>Management</button>
-            </Link>
-            <Link to="/investors">
-              <button>Investors</button>
-            </Link>
-            <Link to="/contact">
-              <button className="last-btn">Contact</button>
-            </Link>
+            <Link to="/company" className="first-btn">Company</Link>
+            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/careers">Careers</Link>
+            <Link to="/residents">Residents</Link>
+            <Link to="/management">Management</Link>
+            <Link to="/investors">Investors</Link>
+            <Link to="/contact" className="last-btn">Contact</Link>
           </div>
         </div>
-        <div
+        <button
+          type="button"
           className={`hamburger-menu ${menuOpen ? "open" : ""}`}
           onClick={toggleMenu}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
         >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
-      <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+      <div id="mobile-menu" className={`mobile-menu ${menuOpen ? "active" : ""}`}>
         <div className="mm-nav-links u-container">
           <h5 className="mobile-eyebrow">Navigation</h5>
           <Link className="mobile-links" to="/company" onClick={toggleMenu}>
