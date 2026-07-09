@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import logoWhite from "../assets/images/logo-white.svg";
 import aamcLogo from "../assets/images/aamc.png";

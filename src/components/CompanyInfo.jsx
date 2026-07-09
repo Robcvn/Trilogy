@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function CompanyInfo() {
     return(
         <div className="c-info-section-container u-container">

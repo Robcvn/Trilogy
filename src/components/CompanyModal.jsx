@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 export default function CompanyModal({ person, previous, next, onClose, onNext, onPrevious }) {
   

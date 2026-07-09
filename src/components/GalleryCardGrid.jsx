@@ -1,4 +1,3 @@
-import React from "react";
 import GalleryCard from "./GalleryCard";
 import GalleryData from "../GalleryData";
 

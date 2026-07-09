@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import PreviewDisplay from "../components/PreviewDisplay";
 import AltDisplay from "../components/AltDisplay";
 import residentsImg from "../assets/images/residents-img.png";
 

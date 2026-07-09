@@ -1,4 +1,3 @@
-import React from "react";
 import PreviewDisplay from "../components/PreviewDisplay.jsx";
 import careersHero from "../assets/images/careers-hero.png";
 import pDisplayImg2 from "../assets/images/p-display-img2.png";

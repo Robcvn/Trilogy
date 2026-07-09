@@ -1714,6 +1714,8 @@ button {
   transition: background-color 0.3s ease;
   border: 1px solid #D9D5D0;
   cursor: pointer;
+  z-index: 10;
+  position: relative;
 }
 
 .ap-btn-left {
@@ -1852,37 +1854,6 @@ button {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-}
-
-/* Improved styles for navigation buttons */
-.ap-btn-left,
-.ap-btn-right {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px;
-  transition: background-color 0.3s ease;
-  border: 1px solid #D9D5D0;
-  z-index: 10; /* Ensure buttons are above other elements */
-  position: relative; /* Ensure z-index works */
-}
-
-.ap-btn-left {
-  background-image: url('./assets/images/ap-left.png');
-}
-
-.ap-btn-right {
-  background-image: url('./assets/images/ap-left.png');
-  transform: scaleX(-1);
-}
-
-.ap-btn-left:hover,
-.ap-btn-right:hover {
-  background-color: white;
-  cursor: pointer;
 }
 
 /* Make sure the touch/click events don't interfere with button clicks */

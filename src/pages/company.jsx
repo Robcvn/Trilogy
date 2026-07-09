@@ -1,6 +1,4 @@
-import React from "react";
 import CompanyInfo from "../components/CompanyInfo";
-import CompanyCard from "../components/CompanyCard";
 import CardGrid from "../components/CardGrid"
 import PreviewDisplay from "../components/PreviewDisplay";
 import propsImage from '../assets/images/p-display-img2.png'

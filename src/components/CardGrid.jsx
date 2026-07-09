@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CompanyCard from "./CompanyCard";
 import CompanyModal from "./CompanyModal";
 import Data from "../Data";

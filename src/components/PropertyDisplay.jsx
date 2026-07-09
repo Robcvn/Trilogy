@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import GalleryData from "../GalleryData";
 import arrowLeft from "../assets/images/arrow-left.svg";
@@ -17,18 +17,18 @@ export default function PropertyDisplay({ id }) {
     const totalProperties = featuredProperties.length;
 
     // Handle previous property
-    const handlePrevious = () => {
-        setCurrentIndex((prevIndex) => 
+    const handlePrevious = useCallback(() => {
+        setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? totalProperties - 1 : prevIndex - 1
         );
-    };
+    }, [totalProperties]);
 
     // Handle next property
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => 
+    const handleNext = useCallback(() => {
+        setCurrentIndex((prevIndex) =>
             prevIndex === totalProperties - 1 ? 0 : prevIndex + 1
         );
-    };
+    }, [totalProperties]);
 
     // Touch handlers for mobile swipe
     const onTouchStart = (e) => {
@@ -63,7 +63,7 @@ export default function PropertyDisplay({ id }) {
 
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [currentIndex]);
+    }, [handlePrevious, handleNext]);
 
     return (
         <div
