@@ -1,11 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import '../App.css';
 import GalleryData from '../GalleryData';
 
 export function PortfolioDetail() {
     const { id } = useParams();
-    const [galleryOpen, setGalleryOpen] = useState(true);
+    const [galleryOpen, setGalleryOpen] = useState(false);
+
+    // fresh property page starts with the gallery collapsed
+    useEffect(() => {
+        setGalleryOpen(false);
+    }, [id]);
+
+    // opening the gallery scrolls it into view so the toggle has a
+    // visible effect even when the grid sits below the fold
+    useEffect(() => {
+        if (galleryOpen) {
+            const gallery = document.getElementById('property-gallery');
+            if (gallery) gallery.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }, [galleryOpen]);
 
     const currentIndex = GalleryData.findIndex(prop => prop.slug === id);
 

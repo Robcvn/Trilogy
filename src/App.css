@@ -3668,6 +3668,9 @@ label {
   .p-display-wrapper {
     width: auto;
     height: 500px;
+    /* without this, the base aspect-ratio (12/5) combines with the fixed
+       height and forces the box to 1200px wide, overflowing the viewport */
+    aspect-ratio: auto;
   }
 
   .p-display-content {
