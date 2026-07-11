@@ -51,13 +51,22 @@ export default function Nav() {
         </Link>
         <div className="nav-links">
           <div className="nav-links-container">
-            <Link to="/company" className="first-btn">Company</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/careers">Careers</Link>
-            <Link to="/residents">Residents</Link>
-            <Link to="/management">Management</Link>
-            <Link to="/investors">Investors</Link>
-            <Link to="/contact" className="last-btn">Contact</Link>
+            {[
+              ["/company", "Company"],
+              ["/portfolio", "Portfolio"],
+              ["/careers", "Careers"],
+              ["/residents", "Residents"],
+              ["/management", "Management"],
+              ["/investors", "Investors"],
+            ].map(([to, label]) => (
+              <Link
+                key={to}
+                to={to}
+                className={location.pathname.startsWith(to) ? "nav-active" : undefined}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
         <button
@@ -82,15 +91,15 @@ export default function Nav() {
           <Link className="mobile-links" to="/portfolio" onClick={toggleMenu}>
             Portfolio
           </Link>
+          <Link className="mobile-links" to="/careers" onClick={toggleMenu}>
+            Careers
+          </Link>
           <Link className="mobile-links" to="/contact" onClick={toggleMenu}>
             Contact
           </Link>
         </div>
         <div className="mm-client-links u-container">
           <h5 className="mobile-eyebrow">Client Access</h5>
-          <Link className="mobile-links" to="/careers" onClick={toggleMenu}>
-            Careers
-          </Link>
           <Link className="mobile-links" to="/residents" onClick={toggleMenu}>
             Residents
           </Link>

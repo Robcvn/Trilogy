@@ -14,7 +14,7 @@ export default function Footer() {
                     <div className="f-contact contact-grid">
                         <div className="f-address">
                             <h4 className="f-eyebrow">contact us</h4>
-                            <p className="f-address f-white-text">520 West Erie Street Ste 100 Chicago, IL 60654</p>
+                            <p className="f-address f-white-text">520 West Erie Street&nbsp; Ste 100<br />Chicago, IL 60654</p>
                         </div>
                         <div className="f-phone">
                             <h4 className="f-eyebrow">phone</h4>
