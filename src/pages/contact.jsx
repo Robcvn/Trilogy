@@ -7,6 +7,7 @@ export function Contact() {
         fname: "",
         bname: "",
         email: "",
+        reason: "",
         message: ""
     });
     const [errors, setErrors] = useState({});
@@ -72,57 +73,84 @@ export function Contact() {
                 ) : (
                     <form className="contact-form-container" onSubmit={handleSubmit} noValidate>
                         <div className="form-left">
-                            <label htmlFor="fname">Full Name</label><br />
-                            <input
-                                className="form-input"
-                                type="text"
-                                id="fname"
-                                name="fname"
-                                value={values.fname}
-                                onChange={handleChange}
-                                required
-                                aria-invalid={Boolean(errors.fname)}
-                                aria-describedby={errors.fname ? "fname-error" : undefined}
-                            /><br />
-                            {errors.fname && <span className="form-error" id="fname-error">{errors.fname}</span>}
-                            <label htmlFor="bname">Business Name</label><br />
-                            <input
-                                className="form-input"
-                                type="text"
-                                id="bname"
-                                name="bname"
-                                value={values.bname}
-                                onChange={handleChange}
-                            /><br />
-                            <label htmlFor="email">Email</label><br />
-                            <input
-                                className="form-input"
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={values.email}
-                                onChange={handleChange}
-                                required
-                                aria-invalid={Boolean(errors.email)}
-                                aria-describedby={errors.email ? "email-error" : undefined}
-                            /><br />
-                            {errors.email && <span className="form-error" id="email-error">{errors.email}</span>}
-                            <label className="message-label" htmlFor="message">Message</label><br />
-                            <textarea
-                                className="form-input message-input"
-                                id="message"
-                                name="message"
-                                value={values.message}
-                                onChange={handleChange}
-                                required
-                                aria-invalid={Boolean(errors.message)}
-                                aria-describedby={errors.message ? "message-error" : undefined}
-                            />
-                            {errors.message && <span className="form-error" id="message-error">{errors.message}</span>}
+                            <div className="form-field">
+                                <label htmlFor="fname">Full Name</label>
+                                <input
+                                    className="form-input"
+                                    type="text"
+                                    id="fname"
+                                    name="fname"
+                                    value={values.fname}
+                                    onChange={handleChange}
+                                    required
+                                    aria-invalid={Boolean(errors.fname)}
+                                    aria-describedby={errors.fname ? "fname-error" : undefined}
+                                />
+                                {errors.fname && <span className="form-error" id="fname-error">{errors.fname}</span>}
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    className="form-input"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={values.email}
+                                    onChange={handleChange}
+                                    required
+                                    aria-invalid={Boolean(errors.email)}
+                                    aria-describedby={errors.email ? "email-error" : undefined}
+                                />
+                                {errors.email && <span className="form-error" id="email-error">{errors.email}</span>}
+                            </div>
+                            <div className="form-field">
+                                <label className="visually-hidden" htmlFor="reason">Reason For Reaching Out</label>
+                                <select
+                                    className="form-input form-select"
+                                    id="reason"
+                                    name="reason"
+                                    value={values.reason}
+                                    onChange={handleChange}
+                                >
+                                    <option value="">Reason For Reaching Out</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="residents">Residents</option>
+                                    <option value="investors">Investors</option>
+                                    <option value="careers">Careers</option>
+                                    <option value="media">Media</option>
+                                </select>
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="bname">Business Name</label>
+                                <input
+                                    className="form-input"
+                                    type="text"
+                                    id="bname"
+                                    name="bname"
+                                    value={values.bname}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <button className="submit-btn" type="submit" disabled={status === "submitting"}>
+                                {status === "submitting" ? "Sending..." : "Submit Form"}
+                            </button>
                         </div>
-                        <button className="submit-btn" type="submit" disabled={status === "submitting"}>
-                            {status === "submitting" ? "Sending..." : "Submit"}
-                        </button>
+                        <div className="form-right">
+                            <div className="form-field">
+                                <label htmlFor="message">Message</label>
+                                <textarea
+                                    className="form-input message-input"
+                                    id="message"
+                                    name="message"
+                                    value={values.message}
+                                    onChange={handleChange}
+                                    required
+                                    aria-invalid={Boolean(errors.message)}
+                                    aria-describedby={errors.message ? "message-error" : undefined}
+                                />
+                                {errors.message && <span className="form-error" id="message-error">{errors.message}</span>}
+                            </div>
+                        </div>
                     </form>
                 )}
             </div>
