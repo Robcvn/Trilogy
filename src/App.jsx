@@ -11,10 +11,12 @@ import { Management } from './pages/management'
 import { Investors } from './pages/investors'
 import { Contact } from './pages/contact'
 import { Legal } from './pages/legal'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return(
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout/>}>
           <Route path="/" element={<Home/>}/>
