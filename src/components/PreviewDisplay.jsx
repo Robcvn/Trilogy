@@ -10,6 +10,9 @@ export default function PreviewDisplay(props) {
                     <div className="pos-link-container">
                         <Link to={props.linkTo} className="port-link">{props.linkText}</Link>
                     </div>
+                    {props.linkText2 && (
+                        <Link to={props.linkTo2} className="contact-link">{props.linkText2}</Link>
+                    )}
                 </div>
             </div>
         </div>

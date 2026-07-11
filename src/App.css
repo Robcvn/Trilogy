@@ -812,14 +812,14 @@ button {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 160px;
-  margin-bottom: 126px;
+  margin-top: 168px;
+  margin-bottom: 112px;
 }
 .head-h {
   font-family: "CentraNo2-Book";
-  font-size: 88px;
+  font-size: 80px;
   color: #181A1C;
-  line-height: 88%;
+  line-height: 88px;
   letter-spacing: -2px;
   margin-bottom: 32px;
 }
@@ -888,13 +888,11 @@ button {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; 
+  background-position: center center;
   display: flex;
-  margin-right: 5%;
-  width: 95%;
-  aspect-ratio: 12 / 5;
-  margin-bottom: 96px;
-  transition: background-image 0.3s ease-in-out; 
+  width: 100%;
+  aspect-ratio: 108 / 55;
+  transition: background-image 0.3s ease-in-out;
 }
 
 .p-display-wrapper::after {
@@ -917,7 +915,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 64px;
+  margin-bottom: 72px;
 
 }
 
@@ -930,22 +928,24 @@ button {
 
 .p-title {
   font-family: "IvyMode";
-  font-size: 24px;
+  font-size: 28px;
+  line-height: 36px;
   color: #EEECE9;
   letter-spacing: 0.5px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .p-address {
   display: flex;
   flex-direction: row;
   font-family: "CentraNo2-Book";
-  font-size: 10px;
+  font-size: 14px;
+  line-height: 20px;
   color: #D9D5D0;
 }
 
 .p-address p:first-child {
-  margin-right: 8px;
+  margin-right: 16px;
 }
 
 .p-display-btn-container {
@@ -961,7 +961,7 @@ button {
   letter-spacing: 1.4px;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-right: 82px;
+  margin-right: 100px;
 }
 
 .view-prop-link::after {
@@ -996,14 +996,20 @@ button {
 
 .btn-text {
   font-family: "IvyMode";
-  font-size: 16px;
+  font-size: 20px;
   line-height: 36px;
   letter-spacing: 1.5px;
   color: #EEECE9;
 }
 
 .btn-text-container {
-  margin: 0 12px;
+  margin: 0 24px;
+}
+
+.left-arrow img, .right-arrow img,
+img.left-arrow, img.right-arrow {
+  width: 40px;
+  height: 40px;
 }
 
 .btn-text-container span:nth-child(2) {
@@ -1026,7 +1032,7 @@ button {
 
 .two-col-wrapper {
   position: relative;
-  margin: 160px 0;
+  padding: 176px 0 208px;
 }
 
 .grid-img {
@@ -1034,9 +1040,10 @@ button {
   background-image: url('./assets/images/grid-pattern-tall.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 960px;
-  width: 40%;
-  top: -161px;
+  height: 630px;
+  width: 577px;
+  max-width: 40%;
+  top: 0;
   left: 0;
   z-index: -1;
 
@@ -1046,7 +1053,7 @@ button {
   background: linear-gradient(180deg, #eeece900, #eeece966 28.48%, #eeece9);
   bottom: 0;
   content: "";
-  height: 66.666%;
+  height: 40%;
   left: -1px;
   position: absolute;
   width: 100%;
@@ -1059,12 +1066,12 @@ button {
 }
 
 .two-col-container {
-  margin-bottom: 196px;
-  
+  margin-bottom: 0;
 }
 
 .two-col-inner-left {
   grid-column: span 8;
+  padding-top: 16px;
 }
 
 .two-col-inner-right {
@@ -1075,11 +1082,11 @@ button {
 
 .two-col-h {
   font-family: "CentraNo2-Book";
-  font-size: 88px;
+  font-size: 72px;
   color: #181A1C;
   line-height: 88px;
   max-width: 745px;
-  letter-spacing: -3.5px;
+  letter-spacing: -2px;
 }
 
 .inner-right-p {
@@ -1088,7 +1095,7 @@ button {
   line-height: 32px;
   color: #181A1C;
   max-width: 576px;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 /* .port-link-wrapper {
@@ -1205,9 +1212,9 @@ button {
 .prev-display-links {
   display: flex;
   flex-direction: row;
-  margin-bottom: 96px;
+  margin-bottom: 72px;
   align-items: center;
-  width: 100%;
+  gap: 48px;
 }
 
 .prev-display-links a {
@@ -1231,9 +1238,7 @@ button {
 }
 
 .pos-link-container {
-  display: block;
   position: relative;
-  width: 100%;
 }
 
 .pos-link-container::before, .pos-link-container::after {
