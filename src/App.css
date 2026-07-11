@@ -303,49 +303,49 @@ a {
 }
 
 .p-2xl-reg {
-  font-family: "Centra-No2-Book";
+  font-family: "CentraNo2-Book";
   font-size: 32px;
   line-height: 48px;
   color: #181A1C;
 }
 
 .p-xl-reg {
-  font-family: "Centra-No2-Book";
+  font-family: "CentraNo2-Book";
   font-size: 24px;
   line-height: 40px;
   color: #181A1C;
 }
 
 .p-lg-reg {
-  font-family: "Centra-No2-Book";
+  font-family: "CentraNo2-Book";
   font-size: 18px;
   line-height: 32px;
   color: #181A1C;
 }
 
 .p-md-reg {
-  font-family: "Centra-No2-Book";
+  font-family: "CentraNo2-Book";
   font-size: 16px;
   line-height: 28px;
   color: #181A1C;
 }
 
 .p-sm-reg {
-  font-family: "Centra-No2-Book";
+  font-family: "CentraNo2-Book";
   font-size: 14px;
   line-height: 24px;
   color: #181A1C;
 }
 
 .p-xs-reg {
-  font-family: "Centra-No2-Book";
+  font-family: "CentraNo2-Book";
   font-size: 12px;
   line-height: 18px;
   color: #181A1C;
 }
 
 .p-2xs-reg {
-  font-family: "Centra-No2-Book";
+  font-family: "CentraNo2-Book";
   font-size: 10px;
   line-height: 16px;
   color: #181A1C;
@@ -1520,7 +1520,8 @@ img.left-arrow, img.right-arrow {
 .c-hero-img {
   width: 100%;
   margin-right: 0;
-  padding-left: max(5%, calc(100% - 1632px));
+  /* left edge tracks the u-container margin (min(90%, 1536px) centered) */
+  padding-left: max(5%, calc((100% - 1536px) / 2));
   box-sizing: border-box;
   aspect-ratio: 1632 / 640;
   object-fit: cover;
@@ -3826,7 +3827,7 @@ label {
   }
 
   .c-hero-img {
-    padding-left: 10%;
+    padding-left: 5%;
     min-height: 400px;
     aspect-ratio: auto;
     object-fit: cover;
