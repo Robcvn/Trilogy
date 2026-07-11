@@ -48,12 +48,13 @@ export function Careers() {
                     </div>
                 </div>
             </section>
+            {/* TODO(user): external job-board URL for view open positions */}
             <PreviewDisplay
             header = 'CAREERS'
             paragraph = 'We shape environments into prosperous, thriving communities. Join us.'
             backgroundImage = {pDisplayImg2}
-            linkText = 'view open positions'
-            linkTo = '/careers'
+            linkText2 = 'view open positions'
+            linkTo2 = '/careers'
             />
 
         </div>
