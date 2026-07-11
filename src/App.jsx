@@ -10,6 +10,7 @@ import { Residents } from './pages/residents'
 import { Management } from './pages/management'
 import { Investors } from './pages/investors'
 import { Contact } from './pages/contact'
+import { Legal } from './pages/legal'
 
 function App() {
   return(
@@ -25,6 +26,7 @@ function App() {
           <Route path="/management" element={<Management/>}/>
           <Route path="/investors" element={<Investors/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/legal" element={<Legal/>}/>
         </Route>
       </Routes>
     </Router>

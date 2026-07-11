@@ -745,7 +745,7 @@ button {
   margin-bottom: 16px;
 }
 
-.mf-links-container span:first-child {
+.mf-links-container a:first-child {
   margin-right: 16px;
 }
 
@@ -1423,6 +1423,19 @@ img.left-arrow, img.right-arrow {
   line-height: 14px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+}
+
+.copyright-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.copyright-link:hover {
+  color: #EEECE9;
+}
+
+.copyright-inner .copyright-link:first-child {
+  margin-right: 16px;
 }
 
 
@@ -3430,6 +3443,60 @@ label {
 
 
 
+
+/* --------------------------------------Legal (Privacy / Terms)---------------------------------------- */
+.legal-wrapper {
+  position: relative;
+}
+
+.legal-container {
+  margin-bottom: 160px;
+}
+
+.legal-h {
+  font-family: 'CentraNo2-Book';
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -2.2px;
+  color: #181A1C;
+  margin-top: 160px;
+  margin-bottom: 128px;
+}
+
+.legal-section {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+.legal-section + .legal-section {
+  margin-top: 96px;
+}
+
+.legal-label {
+  grid-column: 1 / span 4;
+  font-family: 'CentraNo2-Book';
+  font-size: 20px;
+  line-height: 28px;
+  color: #181A1C;
+}
+
+.legal-body {
+  grid-column: 6 / span 10;
+}
+
+.legal-body p {
+  font-family: 'CentraNo2-Book';
+  font-size: 16px;
+  line-height: 24px;
+  color: #595755;
+  margin-bottom: 24px;
+  max-width: 950px;
+  overflow-wrap: break-word;
+}
+
+.legal-body p:last-child {
+  margin-bottom: 0;
+}
 
 /* --------------------------------------Media Queries---------------------------------------- */
 @media screen and (max-width:1960px) {

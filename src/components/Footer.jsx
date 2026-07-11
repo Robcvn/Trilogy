@@ -55,9 +55,8 @@ export default function Footer() {
                 <div className="sub-footer-left">
                     <h5 className="copyright copyright-text">© 2023 Trilogy Real Estate Group</h5>
                     <div className="copyright-inner">
-                        {/* TODO(user): terms and privacy policy pages/content */}
-                        <h5 className="copyright-text">terms</h5>
-                        <h5 className="copyright-text">privacy policy</h5>
+                        <Link className="copyright-text copyright-link" to="/legal">terms</Link>
+                        <Link className="copyright-text copyright-link" to="/legal">privacy policy</Link>
                     </div>
                 </div>
                 <div className="sub-footer-right">
