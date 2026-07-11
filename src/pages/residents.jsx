@@ -16,6 +16,8 @@ export function Residents() {
                     <p className="h-rc-p">Our communities offer resort-style amenities, designer finishes, and premier services. They’re located in desirable neighborhoods, just steps from shopping and dining with easy access to a wide range of recreations and conveniences. And our promise to our residents is that they will always come first—our attentive onsite office and highly-skilled 24/7 maintenance teams ensure our residents live well.</p>
                     <div className="h-rc-links">
                         <Link className="port-link" to="/portfolio">find a home</Link>
+                        {/* TODO(user): resident portal URL */}
+                        <a className="res-login-link" href="#">resident login</a>
                     </div>
                 </div>
                 

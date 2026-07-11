@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import AltDisplay from "../components/AltDisplay";
+import residentsImg from "../assets/images/residents-img.png";
 
 
 export function Investors() {
@@ -24,15 +25,13 @@ export function Investors() {
                     <a className="log-link" href="#">log in</a>
                 </div>
             </div>
-            <div className="ap-p-display-wrapper">
-                <div className="prev-display-container u-container">
-                    <h3 className="prev-h">Investments</h3>
-                    <p className="prev-p">A track record of performance and opportunity.</p>
-                    <div className="contact-link-container">
-                        <Link to="/contact" className='contact-link'>contact us</Link>
-                    </div>
-                </div>
-            </div>
+            <AltDisplay
+            hText = 'ABOUT US'
+            pText = 'Committed to the highest level of quality, service, and performance.'
+            lText = 'meet trilogy'
+            linkTo = '/company'
+            imageUrl = {residentsImg}
+            />
 
         </div>
         

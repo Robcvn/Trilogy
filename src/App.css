@@ -2355,10 +2355,10 @@ img.left-arrow, img.right-arrow {
   background-repeat: no-repeat;
   background-position: center;
   width: 95%;
-  aspect-ratio: 283 / 170;
+  aspect-ratio: 12 / 5;
   display: flex;
   margin-bottom: 96px;
-  
+
 }
 
 .ap-p-display-wrapper::after {
@@ -3089,9 +3089,9 @@ img.left-arrow, img.right-arrow {
 
 .res-h {
   font-family: 'CentraNo2-Book';
-  font-size: 88px;
+  font-size: 72px;
   line-height: 80px;
-  letter-spacing: -2.9px;
+  letter-spacing: -2px;
   margin-bottom: 72px;
   color: #181A1C;
 }
@@ -3111,6 +3111,9 @@ img.left-arrow, img.right-arrow {
 
 .h-rc-links {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .h-rc-p {
@@ -3119,8 +3122,8 @@ img.left-arrow, img.right-arrow {
   line-height: 32px;
   letter-spacing: 0;
   margin-bottom: 48px;
-  margin-top: 160px;
-  max-width: 624px;
+  margin-top: 152px;
+  max-width: 672px;
 }
 
 
@@ -3133,7 +3136,8 @@ img.left-arrow, img.right-arrow {
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  padding: 20px;
+  display: inline-block;
+  padding: 24px 32px;
 }
 
 .log-link::before, .log-link::after {
@@ -3147,15 +3151,15 @@ img.left-arrow, img.right-arrow {
   border-left: 1px solid #ac8b74;
   bottom: 0;
   left: 0;
-  right: 14px;
-  top: 14px;
+  right: 16px;
+  top: 16px;
 }
 
 .log-link::after {
   border-right: 1px solid #ac8b74;
   border-top: 1px solid #ac8b74;
-  bottom: 14px;
-  left: 14px;
+  bottom: 16px;
+  left: 16px;
   right: 0;
   top: 0;
 }
@@ -3184,6 +3188,17 @@ img.left-arrow, img.right-arrow {
  .res-login-link {
   margin-left: 48px;
   padding-bottom: 8px;
+  position: relative;
+}
+
+.res-login-link::after {
+  content: '';
+  position: absolute;
+  background-color: #AC8B74;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 .top-padding {

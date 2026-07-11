@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import PreviewDisplay from "../components/PreviewDisplay";
-import pDisplayImg2 from "../assets/images/p-display-img2.png";
+import AltDisplay from "../components/AltDisplay";
+import residentsImg from "../assets/images/residents-img.png";
 
 
 
@@ -19,12 +19,12 @@ export function Management() {
                     <Link className="log-link" to="/company">learn more</Link>
                 </div>
             </div>
-            <PreviewDisplay
-            header = "careers"
-            paragraph = "Opportunity drives us. Higher is our aim. We’re determined to live well."
-            backgroundImage = {pDisplayImg2}
-            linkText = "view open positions"
-            linkTo = "/careers"
+            <AltDisplay
+            hText = 'ABOUT US'
+            pText = 'Committed to the highest level of quality, service, and performance.'
+            lText = 'meet trilogy'
+            linkTo = '/company'
+            imageUrl = {residentsImg}
             />
         </div>
         
