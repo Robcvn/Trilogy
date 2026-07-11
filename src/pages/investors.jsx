@@ -1,5 +1,5 @@
 import AltDisplay from "../components/AltDisplay";
-import residentsImg from "../assets/images/residents-img.png";
+import investmentsBuilding from "../assets/images/investmentsbuilding.png";
 
 
 export function Investors() {
@@ -30,7 +30,7 @@ export function Investors() {
             pText = 'Committed to the highest level of quality, service, and performance.'
             lText = 'meet trilogy'
             linkTo = '/company'
-            imageUrl = {residentsImg}
+            imageUrl = {investmentsBuilding}
             />
 
         </div>

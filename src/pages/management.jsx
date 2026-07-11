@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import AltDisplay from "../components/AltDisplay";
-import residentsImg from "../assets/images/residents-img.png";
+import mgmtImg from "../assets/images/mgmt-img.png";
 
 
 
@@ -24,7 +24,7 @@ export function Management() {
             pText = 'Committed to the highest level of quality, service, and performance.'
             lText = 'meet trilogy'
             linkTo = '/company'
-            imageUrl = {residentsImg}
+            imageUrl = {mgmtImg}
             />
         </div>
         
