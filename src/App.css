@@ -2503,12 +2503,11 @@ img.left-arrow, img.right-arrow {
 .port-detail-hero {
   position: relative;
   width: 100%;
-  height: 70vh;
-  min-height: 600px;
+  height: 640px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 96px;
+  margin-bottom: 80px;
 }
 
 .port-detail-hero::after {
@@ -2523,27 +2522,33 @@ img.left-arrow, img.right-arrow {
 
 /* Main Content Grid */
 .port-detail-main {
-  margin-bottom: 96px;
+  margin-bottom: 0;
+}
+
+.port-detail-header {
+  display: flex;
+  flex-direction: column;
 }
 
 .port-detail-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 96px;
-  margin-bottom: 96px;
+  grid-template-columns: repeat(16, 1fr);
+  padding-top: 40px;
+  margin-bottom: 100px;
 }
 
 
 /* Left Column */
 .port-detail-left-col {
+  grid-column: 1 / span 3;
   display: flex;
   flex-direction: column;
 }
 
 .port-detail-category {
-  color: #595755;
+  color: #AC8B74;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   display: block;
 }
 
@@ -2551,13 +2556,24 @@ img.left-arrow, img.right-arrow {
   margin-bottom: 48px;
 }
 
-.port-detail-info-block {
-  margin-bottom: 32px;
+.port-detail-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #D9D5D0;
 }
 
 .port-detail-address-text {
+  font-family: "CentraNo2-Book";
+  font-size: 18px;
+  line-height: 40px;
   color: #181A1C;
-  line-height: 24px;
+}
+
+.port-detail-col-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #D9D5D0;
+  margin: 40px 0;
 }
 
 .port-detail-label {
@@ -2567,40 +2583,22 @@ img.left-arrow, img.right-arrow {
   margin-bottom: 8px;
 }
 
-.gallery-toggle-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  color: #181A1C;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  position: relative;
-  padding-bottom: 8px;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-toggle-btn::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #AC8B74;
-}
-
-.gallery-toggle-btn:hover {
-  opacity: 0.7;
-}
-
-.gallery-count {
-  margin-left: 4px;
+.port-detail-units {
+  margin: 0;
 }
 
 /* Right Column */
 .port-detail-right-col {
-  padding-top: 88px;
+  grid-column: 5 / span 10;
+}
+
+.port-detail-lede {
+  font-family: "CentraNo2-Book";
+  font-size: 24px;
+  line-height: 40px;
+  color: #181A1C;
+  max-width: 639px;
+  margin-bottom: 64px;
 }
 
 .port-detail-description {
@@ -2613,32 +2611,170 @@ img.left-arrow, img.right-arrow {
   margin-bottom: 0;
 }
 
-/* Gallery Section */
-.port-detail-gallery-section {
-  margin-bottom: 96px;
+/* Gallery scroll-to control */
+.gallery-scroll-btn {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.port-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.gallery-scroll-btn img {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
 }
 
-.port-gallery-item {
+.gallery-scroll-text {
+  font-family: "CentraNo2-Book";
+  font-size: 24px;
+  line-height: 32px;
+  color: #181A1C;
+}
+
+.gallery-count {
+  font-family: "CentraNo2-Book";
+  font-size: 14px;
+  line-height: 20px;
+  color: #181A1C;
+}
+
+.gallery-scroll-btn:hover {
+  opacity: 0.7;
+}
+
+/* Gallery carousel */
+.port-gallery-section {
+  margin-top: 96px;
+}
+
+.port-gallery-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-left: max(5%, calc((100% - 1536px) / 2));
+  padding-right: 5%;
+}
+
+.port-gallery-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.port-gallery-slide {
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.port-gallery-slide img {
+  display: block;
+  height: 640px;
+  width: auto;
+}
+
+.port-gallery-progress {
+  position: relative;
+  height: 1px;
+  background-color: #D9D5D0;
+  margin: 48px auto;
+  width: min(90%, 1536px);
+}
+
+.port-gallery-progress-thumb {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  background-color: #181A1C;
+  transition: left 0.1s linear, width 0.1s linear;
+}
+
+/* Fullscreen gallery lightbox */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: #0B0B0B;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-height: 100vh;
+  max-width: 76vw;
+  object-fit: contain;
+}
+
+.lightbox-counter {
+  position: absolute;
+  top: 52px;
+  left: 48px;
+  font-family: "CentraNo2-Book";
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #D9D5D0;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.lightbox-close::before,
+.lightbox-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
+  height: 1.5px;
+  background-color: #EEECE9;
 }
 
-.port-gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+.lightbox-close::before {
+  transform: rotate(45deg);
 }
 
-.port-gallery-item:hover img {
-  transform: scale(1.05);
+.lightbox-close::after {
+  transform: rotate(-45deg);
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.lightbox-arrow img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.lightbox-prev {
+  left: 40px;
+}
+
+.lightbox-next {
+  right: 40px;
 }
 
 /* Navigation Section */
@@ -2647,15 +2783,15 @@ img.left-arrow, img.right-arrow {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 48px 0;
-  border-top: 1px solid #D9D5D0;
-  border-bottom: 1px solid #D9D5D0;
   gap: 48px;
-  margin-bottom: 96px;
+  margin-bottom: 48px;
 }
 
 .port-nav-link {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
   text-decoration: none;
   color: #181A1C;
   transition: opacity 0.3s ease;
@@ -2665,18 +2801,23 @@ img.left-arrow, img.right-arrow {
   opacity: 0.7;
 }
 
+.port-nav-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .port-nav-label {
   color: #595755;
   text-transform: uppercase;
-  margin-bottom: 8px;
   display: block;
 }
 
 .port-nav-center {
   text-decoration: none;
   color: #181A1C;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
+  font-family: "CentraNo2-Book";
+  font-size: 16px;
+  line-height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2687,12 +2828,10 @@ img.left-arrow, img.right-arrow {
   content: '';
   width: 24px;
   height: 24px;
-  /* grid-icon.svg was missing from the repo; this is a placeholder icon.
-     TODO(user): confirm against Figma */
   background-image: url('./assets/images/grid-icon.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .port-nav-center:hover {
@@ -2701,7 +2840,7 @@ img.left-arrow, img.right-arrow {
 
 .port-nav-right {
   text-align: right;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 /* CTA Section */
@@ -3480,11 +3619,11 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .port-gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .port-gallery-slide img {
+    height: 480px;
   }
 
- 
+
  }
 
 @media screen and (max-width:953px) {
@@ -4139,12 +4278,13 @@ label {
   margin-bottom: 64px;
 }
 
+.port-detail-left-col,
 .port-detail-right-col {
-  padding-top: 0;
+  grid-column: 1 / -1;
 }
 
-.port-gallery-grid {
-  grid-template-columns: 1fr;
+.port-gallery-slide img {
+  height: 320px;
 }
 
 .port-detail-nav-section {
