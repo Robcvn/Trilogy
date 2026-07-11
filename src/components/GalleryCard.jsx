@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import arrowRight from "../assets/images/arrow-right.svg";
 
 export default function GalleryCard(props) {
     return(
@@ -13,6 +14,7 @@ export default function GalleryCard(props) {
                         <p className="gallery-address">{props.data.city}</p>
                     </div>
                 </div>
+                <img className="gallery-arrow" src={arrowRight} alt="" />
             </div>
         </div>
     )
