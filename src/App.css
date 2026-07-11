@@ -597,11 +597,6 @@ button {
   filter: none;
 }
 
-/* Active-page underline color when transparent */
-.nav-container.nav-transparent .nav-links a.nav-active::after {
-  background-color: #EEECE9;
-}
-
 /* Solid background on hover (only when transparent) */
 .nav-container.nav-transparent:hover {
   background-color: rgb(238, 236, 233);
@@ -615,11 +610,6 @@ button {
 .nav-container.nav-transparent:hover .trilogy-logo {
   color: #181A1C;
   filter: none;
-}
-
-/* Active-page underline returns to black on hover */
-.nav-container.nav-transparent:hover .nav-links a.nav-active::after {
-  background-color: #181A1C;
 }
 
 .nav-items {
@@ -651,7 +641,7 @@ button {
   right: 0;
   bottom: -35px;
   height: 2px;
-  background-color: #181A1C;
+  background-color: #AC8B74;
 }
 
 .mobile-menu {
