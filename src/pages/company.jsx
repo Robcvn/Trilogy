@@ -27,8 +27,6 @@ export function Company() {
             header = "careers"
             paragraph = "Voted one of National Apartment Association's top employers."
             backgroundImage = {propsImage}
-            linkText = "view open positions"
-            linkTo = "/careers"
             />
 
         </div>

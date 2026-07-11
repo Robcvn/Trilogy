@@ -68,6 +68,14 @@ export default function CompanyModal({ person, previous, next, onClose, onNext, 
         </div>
       </div>
 
+      {next && (
+        <div
+          className="modal-next-peek"
+          style={{ backgroundImage: `url(${next.cardImage})` }}
+          aria-hidden="true"
+        ></div>
+      )}
+
       <div className="modal-content-wrapper u-container">
         <div className="modal-content">
           <div className="modal-image-container">
@@ -76,7 +84,7 @@ export default function CompanyModal({ person, previous, next, onClose, onNext, 
           
           <div className="modal-inner-text">
             <div className="modal-inner-top">
-              <h1 className="heading-2xl-book">{person.name}</h1>
+              <h1 className="serif-xl-reg">{person.name}</h1>
               {person.linkedin && (
                 <a 
                   className="linkedin-link" 

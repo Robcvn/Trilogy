@@ -1209,6 +1209,11 @@ img.left-arrow, img.right-arrow {
   margin-bottom: 48px;
 }
 
+/* CTA variant with no buttons (e.g. company page) keeps the design bottom offset */
+.prev-p:last-child {
+  margin-bottom: 160px;
+}
+
 .prev-display-links {
   display: flex;
   flex-direction: row;
@@ -1459,7 +1464,7 @@ img.left-arrow, img.right-arrow {
 }
 
 .c-h {
-  margin-top: 32px;
+  margin-top: 24px;
   margin-bottom: 32px;
 }
 
@@ -1502,8 +1507,9 @@ img.left-arrow, img.right-arrow {
 .c-hero-img {
   width: 100%;
   margin-right: 0;
-  padding-left: 5%;
+  padding-left: max(5%, calc(100% - 1632px));
   box-sizing: border-box;
+  aspect-ratio: 1632 / 640;
   object-fit: cover;
 }
 
@@ -1527,7 +1533,7 @@ img.left-arrow, img.right-arrow {
 .c-info-h {
   margin-bottom: 16px;
   font-family: 'IvyMode';
-  font-size: 88px;
+  font-size: 72px;
   line-height: 80px;
   letter-spacing: .2px;
 }
@@ -1545,11 +1551,11 @@ img.left-arrow, img.right-arrow {
   color: #595755;
   font-size: 18px;
   line-height: 32px;
-
+  max-width: 672px;
 }
 
 .c-info-right p:first-child {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 
@@ -1558,6 +1564,7 @@ img.left-arrow, img.right-arrow {
 .leadership-container {
   display: grid;
   grid-template-columns: repeat(16,1fr);
+  margin-top: 96px;
   margin-bottom: 96px;
 }
 
@@ -1577,6 +1584,7 @@ img.left-arrow, img.right-arrow {
   color: #181A1C;
   line-height: 40px;
   letter-spacing: 0;
+  align-self: end;
 }
 
 
@@ -1586,7 +1594,7 @@ img.left-arrow, img.right-arrow {
   grid-template-columns: repeat(8,1fr);
   /* grid-template-rows: repeat(2,1fr); */
   grid-gap: 48px;
-  margin-bottom: 92px;
+  margin-bottom: 160px;
 }
 
 /* .sub-grid {
@@ -1651,7 +1659,6 @@ img.left-arrow, img.right-arrow {
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  border-bottom: 1px solid #D9D5D0;
   z-index: 2;
   height: 96px;
   box-sizing: border-box;
@@ -1757,26 +1764,38 @@ img.left-arrow, img.right-arrow {
 
 .modal-content {
   display: flex;
-  gap: 64px;
+  gap: 96px;
   width: 100%;
 }
 
 .modal-image-container {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 43.75%;
+  max-width: 43.75%;
+  aspect-ratio: 672 / 880;
 }
 
 .modal-image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
 .modal-inner-text {
-  flex: 0 0 45%;
-  max-width: 45%;
+  flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.modal-next-peek {
+  position: absolute;
+  top: 160px;
+  bottom: 95px;
+  right: 0;
+  width: 96px;
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 .modal-inner-top {
@@ -1810,173 +1829,12 @@ img.left-arrow, img.right-arrow {
   margin-bottom: 0;
 }
 
-/* Container for the entire carousel area */
-.modal-carousel-container {
-  width: 100%;
-  height: calc(100vh - 96px); /* Subtract header height */
-  overflow: hidden;
-  position: relative;
-}
-
-/* Track that moves when sliding/swiping */
-.modal-carousel-track {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  will-change: transform;
-}
-
-/* Each slide in the carousel */
-.modal-slide {
-  min-width: 90%; /* Takes 90% of viewport width, allowing next slide to peek */
-  height: 100%;
-  flex-shrink: 0;
-  padding-right: 5%;
-}
-
-/* Update existing modal-content class */
-.modal-content {
-  display: flex;
-  gap: 64px;
-  padding-top: 64px;
-  padding-bottom: 64px;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Make sure the touch/click events don't interfere with button clicks */
-.modal-header button {
-  pointer-events: auto; /* Ensure buttons receive click events */
-}
-
-/* Add visual indicator for dragging */
-.modal-carousel-track.dragging {
-  cursor: grabbing;
-}
-
-/* Ensure modal wrapper takes full viewport */
-.modal-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10000;
-  background-color: rgb(238, 236, 233);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* Modal header styles */
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 0;
-  border-bottom: 1px solid #D9D5D0;
-  z-index: 2;
-  height: 96px; /* Fixed height for header */
-  box-sizing: border-box;
-}
-
-.modal-header-left,
-.modal-header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.modal-header-text {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.modal-close-btn {
-  font-family: "CentraNo2-Medium";
-  font-size: 14px;
-  color: #181A1C;
-  position: relative;
-  padding: 8px 16px;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-.modal-close-btn:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-/* LinkedIn button style */
-.linkedin-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #D9D5D0;
-  border-radius: 50%;
-  font-family: "CentraNo2-Medium";
-  font-size: 16px;
-  color: #181A1C;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 2;
-}
-
-.linkedin-link:hover {
-  background-color: white;
-}
-
-/* Modal content areas */
-.modal-image-container {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.modal-image-container img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.modal-inner-text {
-  flex: 0 0 45%;
-  max-width: 45%;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-inner-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.modal-hr {
-  height: 1px;
-  background-color: #D9D5D0;
-  margin: 24px 0;
-  width: 100%;
-}
-
-.modal-p {
-  margin-bottom: 24px;
-  color: #595755;
-}
-
 .card {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  aspect-ratio: 1/4;
   width: 100%;
-  height: 599px;
+  height: 520px;
   position: relative;
   overflow: hidden;
   text-align: left;
