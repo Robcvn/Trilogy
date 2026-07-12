@@ -14,16 +14,13 @@ export default function CardGrid() {
     setSelectedIndex(null);
   };
 
+  // Navigation wraps around, per design (modal 01 shows PREVIOUS = last member)
   const goToPrevious = () => {
-    if (selectedIndex > 0) {
-      setSelectedIndex(selectedIndex - 1);
-    }
+    setSelectedIndex((selectedIndex - 1 + Data.length) % Data.length);
   };
 
   const goToNext = () => {
-    if (selectedIndex < Data.length - 1) {
-      setSelectedIndex(selectedIndex + 1);
-    }
+    setSelectedIndex((selectedIndex + 1) % Data.length);
   };
 
   return (
@@ -42,8 +39,8 @@ export default function CardGrid() {
       {selectedIndex !== null && (
         <CompanyModal
           person={Data[selectedIndex]}
-          previous={Data[selectedIndex - 1]}
-          next={Data[selectedIndex + 1]}
+          previous={Data[(selectedIndex - 1 + Data.length) % Data.length]}
+          next={Data[(selectedIndex + 1) % Data.length]}
           onClose={closeModal}
           onNext={goToNext}
           onPrevious={goToPrevious}
