@@ -19,7 +19,7 @@ export function Investors() {
                     </div>
                     <div className="t-block">
                         <h1 className="invest-p-h">1031/DST Investors</h1>
-                        <p className="invest-p">Trilogy Real Estate Group provides DST investors timely updates on their Trilogy DST investment programs. To access your investment information please click the link below. To contact Investor Services by phone please call 847-265-1334.</p>
+                        <p className="invest-p">Trilogy Real Estate Group provides DST investors timely updates on their Trilogy DST investment programs. To access your investment information please click the link below. To contact Investor Services by phone please call <span className="bolder">847-265-1334</span>.</p>
                     </div>
                     {/* TODO(user): investor log-in destination */}
                     <a className="log-link" href="#">log in</a>

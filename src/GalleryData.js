@@ -24,7 +24,7 @@ export default [
         units: 172,
         description: [
             "Optima Old Orchard Woods is a 646-unit condominium tower featuring 172 high-end rental units in Skokie, IL.",
-            "The property is located within walking distance of Harms Woods and Old Orchard Woods with direct access to the Eden’s Expressway. The property features first-class amenities including a resort-style indoor swimming pool, spa, state-of-the-art fitness center, tennis court, party room with catering kitchen, heated indoor parking and grand lobby. Each rental unit has its own private balcony or patio and is finished with modern, luxury-apartment designed finishes including floor-to-ceiling views, private recessed balconies and terraces with breathtaking views of acres of forest and the Chicago skyline, stainless steel appliances, granite countertops, and full-size washer/dryer."
+            "The property is located within walking distance of Harms Woods and Old Orchard Woods with direct access to the Edens Expressway. The property features first-class amenities including a resort-style indoor swimming pool, spa, state-of-the-art fitness center, tennis court, party room with catering kitchen, heated indoor parking, and grand courtyard with reflecting pool and fountain. The beautifully constructed homes offer generous floor plans with designer finishes including floor-to-ceiling vistas, private recessed balconies and terraces with breathtaking views of acres of forest and the Chicago skyline, stainless steel appliances, granite countertops, and full-size washer/dryer."
         ],
         img: optimaImg,
         // TODO(user): replace with real gallery photos

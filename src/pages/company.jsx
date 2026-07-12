@@ -25,7 +25,7 @@ export function Company() {
             <CardGrid />
             <PreviewDisplay
             header = "careers"
-            paragraph = "Voted one of National Apartment Association's top employers."
+            paragraph = "Voted one of National Apartment Association’s top employers."
             backgroundImage = {propsImage}
             />
 

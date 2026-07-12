@@ -7,8 +7,8 @@ export default [
         title: "Chief Executive Officer",
         cardImage: cardMale,
         linkedin: "https://www.linkedin.com/in/neilgehani",
-        bio1: "Neil S. Gehani is the Chief Executive Officer of Trilogy Real Estate Group. With over 25 years of experience in real estate investment and development, Neil has established himself as a visionary leader in the multifamily sector. Under his leadership, Trilogy has grown into a premier real estate investment and management firm with a portfolio spanning 14 cities across the United States.",
-        bio2: "Neil's strategic vision and commitment to operational excellence have been instrumental in Trilogy's success across multiple market cycles. He is known for his hands-on approach to leadership and his dedication to creating communities where residents truly live well. Neil holds a Bachelor's degree in Finance from the University of Illinois and is an active member of the National Multifamily Housing Council."
+        bio1: "Neil Gehani is Chief Executive Officer of Trilogy Real Estate Group, LLC (“Trilogy”), where he focuses on the strategic direction of the firm and fundraising. Prior to founding Trilogy, Mr. Gehani was in private practice, where he concentrated on real estate and tax law. His clients included buyers and sellers of residential and commercial properties, real estate developers, and condominium associations. Prior to private practice, Mr. Gehani worked for KPMG LLP, where he advised clients on the structuring and corporate and partnership taxation aspects of various business transactions. His work at KPMG LLP included the ongoing representation of a preeminent real estate investment management firm.",
+        bio2: "Mr. Gehani received a Juris Doctor and an LL.M. in Taxation from the Boston University School of Law and a B.B.A. from Michigan State University’s Eli Broad College of Business. Mr. Gehani has been a speaker at industry events and is a member of the Young Presidents’ Organization (YPO), Urban Land Institute, and the National Multifamily Housing Council."
     },
     {
         name: "Girish S. Gehani",
