@@ -807,7 +807,7 @@ button {
 }
 .head-h {
   font-family: "CentraNo2-Book";
-  font-size: 80px;
+  font-size: 88px;
   color: #181A1C;
   line-height: 88px;
   letter-spacing: -2px;
@@ -1029,7 +1029,6 @@ img.left-arrow, img.right-arrow {
   position: absolute;
   background-image: url('./assets/images/grid-pattern-tall.svg');
   background-repeat: no-repeat;
-  background-size: cover;
   height: 630px;
   width: 577px;
   max-width: 40%;
@@ -1156,8 +1155,8 @@ img.left-arrow, img.right-arrow {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  margin-right: 5%;
-  width: 95%;
+  margin-right: 96px;
+  width: calc(100% - 96px);
   aspect-ratio: 12 / 5;
   margin-bottom: 96px;
 }
@@ -1283,6 +1282,7 @@ img.left-arrow, img.right-arrow {
   display: grid;
   grid-template-columns: 192px 1fr;
   grid-column: 1 / span 5;
+  align-content: start;
 }
 
 .f-inner-content-wrapper {
@@ -1369,8 +1369,8 @@ img.left-arrow, img.right-arrow {
   font-size: 12px;
   line-height: 18px;
   color: #595755;
-  margin-top: 96px;
-  margin-bottom: 96px;
+  margin-top: 80px;
+  margin-bottom: 64px;
   z-index: 2;
   max-width: 979px;
 
@@ -1555,7 +1555,7 @@ img.left-arrow, img.right-arrow {
   color: #595755;
   font-size: 18px;
   line-height: 32px;
-  max-width: 672px;
+  max-width: 624px;
 }
 
 .c-info-right p:first-child {
@@ -1611,9 +1611,9 @@ img.left-arrow, img.right-arrow {
 
 .grid-grid {
   background-image: url('./assets/images/grid-pattern-tall.svg');
-  background-size: cover;
+  background-repeat: repeat;
   position: absolute;
-  width: 33%;
+  width: 38.9%;
   height: 47%;
   right: 0;
 }
@@ -1742,8 +1742,8 @@ img.left-arrow, img.right-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border: 1px solid #D9D5D0;
   border-radius: 50%;
   font-family: "CentraNo2-Medium";
@@ -1788,6 +1788,9 @@ img.left-arrow, img.right-arrow {
   flex: 1;
   display: flex;
   flex-direction: column;
+  /* name block sits 122px below the photo top, column is 672 wide, per design */
+  padding-top: 122px;
+  max-width: 672px;
 }
 
 .modal-next-peek {
@@ -2358,7 +2361,7 @@ img.left-arrow, img.right-arrow {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 95%;
+  width: calc(100% - 96px);
   aspect-ratio: 12 / 5;
   display: flex;
   margin-bottom: 96px;
@@ -2696,7 +2699,7 @@ img.left-arrow, img.right-arrow {
   position: absolute;
   top: 0;
   height: 1px;
-  background-color: #181A1C;
+  background-color: #AC8B74;
   transition: left 0.1s linear, width 0.1s linear;
 }
 
@@ -2712,8 +2715,8 @@ img.left-arrow, img.right-arrow {
 }
 
 .lightbox-image {
-  max-height: 100vh;
-  max-width: 76vw;
+  height: 100vh;
+  max-width: 100vw;
   object-fit: contain;
 }
 
@@ -2918,11 +2921,10 @@ img.left-arrow, img.right-arrow {
 .grid-pat {
   background-image: url('./assets/images/grid-pattern-tall.svg');
   background-repeat: repeat;
-  background-size: cover;
   position: absolute;
   right: 0;
-  width: 33.3%;
-  min-height: 750px;
+  width: 38.9%;
+  min-height: 816px;
   z-index: -1;
 }
 
@@ -2938,22 +2940,23 @@ img.left-arrow, img.right-arrow {
 
 .careers-header-container {
   display: grid;
-  grid-template-columns: repeat(16,1fr);
+  /* 720px/672px columns of the 1536 container, per design (right col at x=864) */
+  grid-template-columns: 46.875% 43.75%;
   margin-top: 160px;
   grid-gap: 48px;
 }
 
 .careers-h {
   font-family: 'CentraNo2-Book';
-  font-size: 80px;
+  font-size: 88px;
   line-height: 88px;
   color: #181A1C;
   letter-spacing: -2px;
-  grid-column: 1 / span 9;
+  grid-column: 1;
 }
 
 .careers-inner-right {
-  grid-column: 10 / span 6;
+  grid-column: 2;
 }
 
 .careers-inner-right:nth-child(1) {
@@ -2969,9 +2972,14 @@ img.left-arrow, img.right-arrow {
   font-family: 'CentraNo2-Book';
   font-size: 1.125rem;
   line-height: 2rem;
-  color: #181A1C;
+  color: #595755;
   letter-spacing: 0;
-  max-width: 648px;
+  max-width: 624px;
+}
+
+.careers-email-link {
+  color: #181A1C;
+  text-decoration: none;
 }
 
 .careers-h-p:first-child {
@@ -3010,12 +3018,12 @@ img.left-arrow, img.right-arrow {
 
 .careers-hero {
   background-image: url('./assets/images/careers-hero.png');
-  width: 95%;
+  width: calc(100% - 96px);
   aspect-ratio: 51/20;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: 5%;
+  margin-left: 96px;
   margin-top: 68px;
   margin-bottom: 130px;
 }
@@ -3081,7 +3089,8 @@ img.left-arrow, img.right-arrow {
 
 .r-h-container {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  /* 720px/672px columns of the 1536 container, per design (right col at x=864) */
+  grid-template-columns: 46.875% 43.75%;
   margin-top: 160px;
   margin-bottom: 88px;
   grid-gap: 48px;
@@ -3125,9 +3134,10 @@ img.left-arrow, img.right-arrow {
   font-size: 18px;
   line-height: 32px;
   letter-spacing: 0;
+  color: #595755;
   margin-bottom: 48px;
   margin-top: 152px;
-  max-width: 672px;
+  max-width: 624px;
 }
 
 
@@ -3219,7 +3229,8 @@ img.left-arrow, img.right-arrow {
   margin-bottom: 88px;
   margin-top: 160px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  /* 720px/672px columns of the 1536 container, per design (right col at x=864) */
+  grid-template-columns: 46.875% 43.75%;
   grid-gap: 48px;
 }
 
@@ -3228,6 +3239,7 @@ img.left-arrow, img.right-arrow {
   font-size: 24px;
   line-height: 2rem;
   letter-spacing: -0.5px;
+  color: #181A1C;
   margin-bottom: 32px;
 }
 
@@ -3236,6 +3248,8 @@ img.left-arrow, img.right-arrow {
   font-size: 18px;
   line-height: 2rem;
   letter-spacing: 0;
+  color: #595755;
+  max-width: 624px;
 }
 
 .col-one {
@@ -3243,7 +3257,8 @@ img.left-arrow, img.right-arrow {
 }
 
 .col-two {
-
+  /* right column starts level with the left paragraph row, per design (y=407) */
+  margin-top: 152px;
 }
 
 .t-block {
@@ -3446,12 +3461,12 @@ label {
 
 .legal-h {
   font-family: 'CentraNo2-Book';
-  font-size: 56px;
-  line-height: 64px;
-  letter-spacing: -2.2px;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -2px;
   color: #181A1C;
   margin-top: 160px;
-  margin-bottom: 128px;
+  margin-bottom: 96px;
 }
 
 .legal-section {
@@ -3466,8 +3481,8 @@ label {
 .legal-label {
   grid-column: 1 / span 4;
   font-family: 'CentraNo2-Book';
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 24px;
+  line-height: 32px;
   color: #181A1C;
 }
 
@@ -3477,11 +3492,11 @@ label {
 
 .legal-body p {
   font-family: 'CentraNo2-Book';
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 32px;
   color: #595755;
   margin-bottom: 24px;
-  max-width: 950px;
+  max-width: 960px;
   overflow-wrap: break-word;
 }
 
@@ -3721,6 +3736,10 @@ label {
   .investors-h-container {
     grid-template-columns: 1fr;
     margin-top: 80px;
+  }
+
+  .col-two {
+    margin-top: 0;
   }
 
   .res-h {
@@ -3980,7 +3999,7 @@ label {
     grid-column: 1 / span 1;
     margin-bottom: 24px;
     font-size: 40px;
-    line-height: 56px;
+    line-height: 48px;
   }
 
   .careers-h-p {
@@ -4053,6 +4072,10 @@ label {
   .modal-inner-text {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .modal-inner-text {
+    padding-top: 0;
   }
 
   .modal-image-container {
@@ -4131,14 +4154,49 @@ label {
     display: none;
   }
 
+  /* design mobile frames: 80px nav, 40px side gutters, hero text at y=176 */
+  .nav-container {
+    height: 80px;
+  }
+
+  .top-padding,
+  .home-container,
+  .careers-wrapper,
+  .residents-wrapper,
+  .management-wrapper {
+    padding-top: 80px;
+  }
+
+  .u-container {
+    width: calc(100% - 80px);
+  }
+
+  .header-container {
+    margin-top: 96px;
+  }
+
+  .r-h-container,
+  .investors-h-container,
+  .careers-header-container {
+    margin-top: 96px;
+  }
+
+  .legal-h {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.6px;
+    margin-top: 96px;
+    margin-bottom: 48px;
+  }
+
   .head-h {
     font-size: 40px;
-    line-height: 40px;
+    line-height: 48px;
   }
 
   .c-h {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
   }
 
   .two-col-h {
@@ -4148,5 +4206,28 @@ label {
 
   .prev-p {
     font-size: 22px;
+  }
+
+  /* bands bleed to the left edge, 40px gap on the right */
+  .prev-display-wrapper,
+  .ap-p-display-wrapper {
+    width: calc(100% - 40px);
+    margin-right: 40px;
+  }
+
+  .careers-hero {
+    margin-left: 40px;
+    width: calc(100% - 40px);
+  }
+
+  /* bordered button full width, text button centered below */
+  .h-rc-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .res-login-link {
+    align-self: center;
   }
 }
