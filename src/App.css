@@ -592,6 +592,10 @@ button {
   filter: brightness(0) invert(1);
 }
 
+.nav-container.nav-transparent .hamburger-menu span {
+  background-color: #EEECE9;
+}
+
 .nav-container.nav-transparent .nav-links a {
   color: #EEECE9;
   filter: none;
@@ -610,6 +614,10 @@ button {
 .nav-container.nav-transparent:hover .trilogy-logo {
   color: #181A1C;
   filter: none;
+}
+
+.nav-container.nav-transparent:hover .hamburger-menu span {
+  background-color: #181A1C;
 }
 
 .nav-items {
