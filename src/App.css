@@ -647,10 +647,13 @@ button {
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 80px);
+  /* sits flush under the nav (96px at tablet, 80px <=480) so no page
+     content peeks through the seam while scrolling */
+  height: calc(100vh - 96px);
   position: absolute;
   left: 0;
-  top: 97px;
+  top: 96px;
+  border-top: 1px solid #D9D5D0;
   background-color: rgb(238, 236, 233);
   width: 100%;
   justify-content: space-evenly;
@@ -4158,6 +4161,11 @@ label {
   /* design mobile frames: 80px nav, 40px side gutters, hero text at y=176 */
   .nav-container {
     height: 80px;
+  }
+
+  .mobile-menu {
+    top: 80px;
+    height: calc(100vh - 80px);
   }
 
   .top-padding,
