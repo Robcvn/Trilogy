@@ -2258,6 +2258,10 @@ img.left-arrow, img.right-arrow {
 .gallery-address-container {
   display: flex;
   flex-direction: row;
+  /* address and city wrap as whole units on narrow cards
+     instead of breaking mid-line */
+  flex-wrap: wrap;
+  white-space: nowrap;
   z-index: 10;
 }
 
@@ -3526,7 +3530,7 @@ label {
   }
 
   .stat-p {
-    font: 0.875rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -3975,6 +3979,15 @@ label {
 
   .p-stats {
     grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+  /* cancel the desktop column placements, otherwise they force
+     implicit columns and the stats stay in a row */
+  .stat-block-one,
+  .stat-block-two,
+  .stat-block-three {
+    grid-column: 1;
   }
 
   .p-grid {
@@ -3987,11 +4000,13 @@ label {
   }
 
   .stat-h {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 36px;
   }
 
   .stat-p {
-    font: 1rem;
+    font-size: 1rem;
+    line-height: 24px;
   }
 
   .careers-header-container {
