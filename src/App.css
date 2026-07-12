@@ -3637,8 +3637,9 @@ label {
     flex-direction: column;
   }
 
-  .left-arrow, .right-arrow {
-    width: 70%;
+  /* 40px arrows with a 16px gap, per the design's mobile carousel row */
+  .p-buttons-mobile .p-display-btn-container {
+    gap: 16px;
   }
 
   .gallery-card-wrapper {
