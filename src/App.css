@@ -2163,6 +2163,8 @@ img.left-arrow, img.right-arrow {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  /* keep the caption text clear of the arrow at any viewport width */
+  gap: 24px;
 }
 
 .gallery-arrow {
